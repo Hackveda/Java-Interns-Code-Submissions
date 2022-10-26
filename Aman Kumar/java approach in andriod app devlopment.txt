@@ -1,0 +1,44 @@
+package com.example.firstjavaapproach;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity
+implements View.OnClickListener{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_main);
+        //for creating a layout
+        LinearLayout layout =new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+       // for creating a TextView controls
+
+
+        TextView txt =new TextView(this);
+        txt.setText("welcome to my first application");
+        layout.addView(txt);
+        //for creating a eventHandler(button)
+
+
+        Button btn= new Button(this);
+        btn.setText("click here");
+        btn.setOnClickListener(this);
+       layout.addView(btn);
+       // set the content
+        setContentView(layout);
+
+    }
+    @Override
+    public void onClick(View v){
+        Toast.makeText(this,"welcome to my first application",Toast.LENGTH_LONG).show();
+    }
+
+}
