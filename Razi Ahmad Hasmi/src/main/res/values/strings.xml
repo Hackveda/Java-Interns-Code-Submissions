@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HybridApproach</string>
+    <string name="welcome_to_hybrid_approach">Welcome to Hybrid Approach</string>
+    <string name="show_message">Show Message</string>
+</resources>
