@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">IntentInAndroid</string>
-    <string name="phone_application">Phone Application</string>
-    <string name="enter_a_number">Enter a number</string>
-    <string name="call">CALL</string>
+    <string name="app_name">Mediaplayer Android1</string>
+    <string name="home_activity">Home Activity</string>
+    <string name="homeactivity">Home Activity</string>
 </resources>
