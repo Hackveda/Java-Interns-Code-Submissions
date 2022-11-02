@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">HybridApproach</string>
-    <string name="welcome_to_hybrid_approach">Welcome to Hybrid Approach</string>
-    <string name="show_message">Show Message</string>
+    <string name="app_name">IntentInAndroid</string>
+    <string name="phone_application">Phone Application</string>
+    <string name="enter_a_number">Enter a number</string>
+    <string name="call">CALL</string>
 </resources>
