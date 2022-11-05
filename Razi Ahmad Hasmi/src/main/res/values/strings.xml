@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Mediaplayer Android1</string>
-    <string name="home_activity">Home Activity</string>
-    <string name="homeactivity">Home Activity</string>
+    <string name="app_name">DataBaseApp</string>
+    <string name="task_database_app">Task Database App</string>
+    <string name="enter_task_name">enter task name</string>
+    <string name="entertask_details">entertask details</string>
+    <string name="name">Name</string>
+    <string name="save_task">Save Task</string>
+    <string name="view_task">View Task</string>
+    <string name="results">Results</string>
 </resources>
