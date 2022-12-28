@@ -1,0 +1,176 @@
+// 1. BOOLEAN
+
+public class yoshit {
+ 
+   
+    public static void main(String args[])
+    {
+ 
+         
+          boolean a = false;
+        boolean b = true;
+ 
+       
+        if (b == true)
+	{
+            System.out.println("statement true");
+        }
+
+          if(a == false)
+	{
+                       System.out.println("statement false");        
+        }
+    }
+}
+
+
+
+
+// 2. BYTE
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        byte y = 126;
+ 
+        System.out.println(y);
+ 
+    }
+}
+
+
+
+// 3. SHORT
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        short y = 126;
+ 
+        System.out.println(y);
+ 
+      
+    }
+}
+
+
+
+// 4. INT
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        int y = 126;
+ 
+        System.out.println(y);
+ 
+      
+    }
+}
+
+
+
+
+// 5. long
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        long y = 126;
+ 
+        System.out.println(y);
+ 
+      
+    }
+}
+
+
+
+
+// 6. float
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        float y = 126.126f;
+ 
+        System.out.println(y);
+ 
+      
+    }
+}
+
+
+
+// 7. DOUBLE
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        double y = 126.126;
+ 
+        System.out.println(y);
+ 
+      
+    }
+}
+
+
+
+
+// 8. CHAR
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        char y = 'p';
+ 
+        System.out.println(y);
+ 
+      
+    }
+}
+
+
+
+
+
+// 9. STRING
+
+public class yoshit {
+ 
+   
+    public static void main(String args[]) 
+	{
+ 
+        String s1 = new String("My name is YOSHIT VERMA");
+ 
+        System.out.println(s1);
+ 
+ 
+      
+    }
+}
+
+
