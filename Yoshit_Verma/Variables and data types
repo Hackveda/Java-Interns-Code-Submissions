@@ -3,7 +3,7 @@
 public class yoshit {
  
    
-    public static void main(String args[])
+    public static void main(String[] args)
     {
  
          
@@ -31,7 +31,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         byte y = 126;
@@ -48,7 +48,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         short y = 126;
@@ -66,7 +66,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         int y = 126;
@@ -85,7 +85,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         long y = 126;
@@ -104,7 +104,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         float y = 126.126f;
@@ -122,7 +122,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         double y = 126.126;
@@ -141,7 +141,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         char y = 'p';
@@ -161,7 +161,7 @@ public class yoshit {
 public class yoshit {
  
    
-    public static void main(String args[]) 
+    public static void main(String[] args) 
 	{
  
         String s1 = new String("My name is YOSHIT VERMA");
