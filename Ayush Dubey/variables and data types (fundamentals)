@@ -43,4 +43,138 @@ String = group of characters ( ex. name assigned )
 
 */
 
-//
+//nestedwhile
+
+package com.ayush;
+
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+		// demo nested while 
+		int i=1, j=1;
+		while (i<= 10)
+		{
+			while (j<= 5)
+			{
+				System.out.print("*");
+				j++;
+			}
+			i++;
+			System.out.println("");
+			j=1;
+		}
+		
+	}
+
+}
+             
+// string variable sample code
+package com.ayush;
+
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+     // variables 
+	  String name = " Ayush";
+	  String neighbour = "Aniket";
+	  String friend = neighbour;
+	  
+	  System.out.println(friend);
+	  System.out.println(name);
+	}
+
+}
+
+// data types 
+
+package com.ayush;
+
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	//primitive data types
+	
+	byte age = 19;
+	int phone = 9823788888;
+	long no2 = 1234888888888800009L
+	float = 3.14F
+	char letter = '@';
+	boolean isAdult = false;
+	
+	//non-primitive data type
+	
+	String name = "Ayush";
+	System.out.println(name.length());
+	
+	}
+
+}
+
+package com.ayush;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	//non-primitive data type
+	
+	String name = "Ayush";
+	System.out.println(name.length());
+	
+	}
+
+}
+
+package com.ayush;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	//Strings
+	
+	String name1 = "Ayush";
+	String name2 = "Arpit";
+	String brothers = name1 + " and "  + name2;
+	System.out.println(brothers);
+	
+	
+	String name = "Ayush";
+	System.out.println(name.charAt(2));
+	}
+
+}
+
+//Arrays
+
+package com.ayush;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	//Arrays
+	
+	int age = 30;
+	int physics = 99;
+	int chem = 95;
+	int eng = 90;
+	
+	int[] marks = new int [3];
+	marks[0] = 99;
+	marks[1] = 95;
+	marks[2] = 90;
+	
+	System.out.println(marks[2]);
+	
+	}
+
+}
+
+
