@@ -30,7 +30,7 @@ public class String_operations {
         }
         
         System.out.println(name1.toLowerCase());// it will convert upper to lower case
-        System.out.println(name2.toUpperCase());// it will convert upper to lower case
+        System.out.println(name2.toUpperCase());// it will convert lower to upper case
         System.out.println(name2.substring(1,4));// it will give you the your requested part in this string value.
         System.out.println(name2.substring(2));// it will start print in your requested place is consider as bigenning.
         System.out.println(name2.isBlank());// it will give only true/false value according to has value or not.
