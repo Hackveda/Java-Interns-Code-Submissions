@@ -177,4 +177,175 @@ public class Practice {
 
 }
 
+// use of java.util.Arrays;
+
+package com.ayush;
+import java.util.Arrays;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	//Arrays
+	
+	int age = 30;
+	int physics = 99;
+	int chem = 95;
+	int eng = 90;
+	
+	int[] marks = new int [3];
+	marks[0] = 99;
+	marks[1] = 95;
+	marks[2] = 90;
+	
+	System.out.println(marks[0]);
+	
+	Arrays.sort(marks);
+	
+	System.out.println(marks[0]);
+	
+	}
+
+}
+
+//Arithmetic operators
+
+package com.ayush;
+import java.util.Arrays;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	// Arithematic operators
+		
+		int a = 4;
+		int b = 2;
+		int sum =a + b;
+		int diff =a - b;
+		int mul =a * b;
+		int div =a / b;
+		int modulo =a % b;
+		
+		System.out.println(sum);
+		System.out.println(diff);
+		System.out.println(mul);
+		System.out.println(div);
+		System.out.println(modulo);
+		
+	}
+
+}
+
+//nested loop basics 
+
+Ex. 1 : 
+
+package com.ayush;
+import java.util.Arrays;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	// nested loops
+		
+	for (int i = 0; i < 3; i++)
+	{
+	for (int j = 0; j < 2; j++)	
+	
+		System.out.println(i + " " + j );
+	
+	System.out.println();
+	}
+
+}
+	
+}
+
+O/P 
+
+0 0
+0 1
+
+1 0
+1 1
+
+2 0
+2 1
+
+ex. 2: Print star incrementing
+
+package com.ayush;
+import java.util.Arrays;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	// nested loops
+		
+	for (int i = 1; i <=5; i++)
+	{
+	for (int j = 1; j <=i; j++)	
+	
+		System.out.print("*");
+
+	
+	System.out.println();
+	}
+
+}
+	
+}
+ 
+O/P
+
+*
+**
+***
+****
+*****
+
+Ex. 3 Print multiplication table 1 to 10
+
+package com.ayush;
+import java.util.Arrays;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	// nested loops
+		
+	for (int i = 1; i <=10; i++)
+	{
+	for (int j = 1; j <=10; j++)	
+	
+		System.out.print((i * j) + " ");
+
+
+	
+	System.out.println();
+	}
+
+}
+	
+}
+
+O/P
+
+1 2 3 4 5 6 7 8 9 10 
+2 4 6 8 10 12 14 16 18 20 
+3 6 9 12 15 18 21 24 27 30 
+4 8 12 16 20 24 28 32 36 40 
+5 10 15 20 25 30 35 40 45 50 
+6 12 18 24 30 36 42 48 54 60 
+7 14 21 28 35 42 49 56 63 70 
+8 16 24 32 40 48 56 64 72 80 
+9 18 27 36 45 54 63 72 81 90 
+10 20 30 40 50 60 70 80 90 100 
+
+
+// nested loops + 
 
