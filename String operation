@@ -1,0 +1,57 @@
+/ Abstract class
+package Abstract;
+
+abstract class AbstractClass {
+	public void Mymothod(){
+		System.out.println("Hellow");
+		
+	}
+	abstract public void anotherMar();
+
+}
+
+
+// Extends abstract class
+package Abstract;
+public class Demo extends AbstractClass {
+	public void   anotherMar() {
+		System.out.println("another");
+	}
+
+	public static void main(String[] args) {
+		
+		AbstractClass obj=new Demo();
+		obj.anotherMar();
+		obj.Mymothod();
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+// String problem
+public class Stringoperator {
+	
+	public static void main(String[] args) {
+		
+	char a='A';
+	String b="Nikhil jaiswal";
+	String c="java devloper";
+	System.out.println(b.length());
+	
+	System.out.println(c.charAt(0));
+	System.out.println(c.compareTo(b));
+	System.out.println(b.strip());
+	
+	
+	System.out.println(c.toUpperCase());//convert in to upper case
+	System.out.println(c.toLowerCase());//convert in to lower case
+	System.out.println(c.substring(1,3));//return substring from position 1to position 3-1
+	System.out.println(c.substring(3));
+		// TODO Auto-generated method stub
+
+	}
+
+}
