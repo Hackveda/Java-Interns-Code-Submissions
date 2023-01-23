@@ -347,5 +347,86 @@ O/P
 10 20 30 40 50 60 70 80 90 100 
 
 
-// nested loops + 
+/twoD Array
 
+package com.ayush;
+import java.util.Scanner;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	 System.out.print("Enter 2D array size : ");
+	 Scanner sc=new Scanner(System..in);
+	 int rows=sc.nextInt();
+	 int coloumns=sc.nextInt();
+	 
+	 System.out.println("Enter array elements : ");
+	 
+	 int twoD[][]=new int{rows][coloumns];
+	 
+	  for(int i=0; i<rows;i++)
+	    {
+	      for(int j=0; j<rows;j++)
+	      {
+	          twoD[i][j]=sc.nextInt[];
+	      }
+	    }
+	    System.out.print("\nData you entered : \n");
+	    
+	    for(int []x:twoD)
+	    { 
+	         for(int y:x)
+		 {
+		 System.out.print(y+"          ");
+		 }
+		 System.out.println();
+	    }
+	  }
+	}
+	
+
+// nested while java
+
+package com.ayush;
+import java.util.Scanner;
+
+public class Practice {
+
+	public static void main(String[] args) 
+	{
+	
+		int i=1,j=1;
+			while (i<=10)
+			{
+				while(j<=9)
+				{
+				System.out.print(j);
+					j++;
+				}
+				i++;
+				System.out.println("");
+				j=1;
+			}
+		}
+	}
+
+//Do while
+
+package com.ayush;
+
+public class Practice {
+	public static void main(String[] args)
+	{
+	int count = 1;
+	do 
+	{
+		System.out.println("Number_Count is: " + count);
+		count++;
+	}
+	while (count <= 19);
+	}
+}
+
+
+	
