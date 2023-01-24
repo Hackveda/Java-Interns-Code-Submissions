@@ -1,0 +1,125 @@
+// lecture 1source  code (vishal_karanjekar)
+//hello world code
+
+class HelloWorld {
+    public static void main(String[] args) {
+         
+    System.out.println("Hello, World!");// for printing output
+        
+    }
+}
+
+
+
+//lecture 2 source code (vishal_karanjekar)
+//various datatypes in java
+
+public class DataType {
+	public static void main(String[] args) {
+		int i=1;
+		System.out.println(i);
+		short a=32767;
+		System.out.println("a= " + a);
+		String a_1="My name is Vishal \b";
+	    System.out.println(a_1);
+		String z="NULL \b";
+		System.out.println(z);
+		float pi=3.14_15F;
+		System.out.println("pi= " + pi);
+		
+
+	}
+
+}
+
+//lecture 3 source code (vishal_karanjekar)
+// nested while loop concept
+
+public class Solution{
+    
+public static void main(String[] args) {
+		int i=1,j=1;   //initialization
+		while(i<=10) {                    
+			while(j<=5) {
+				System.out.print("*");     //loop 1
+				j++;
+				
+			}
+			System.out.println("");       //loop 2
+			i++;
+			j=1;
+				
+		}
+		 // TODO Auto-generated method stub
+	}
+          
+
+}
+
+
+//lecture 4 source code(vishal_karanjekar)
+//oops concepts & strings 
+
+//abstraction 
+
+package Abstraction_code;
+
+abstract class AbstractClass {
+	public void Mymethod(){
+		System.out.println("Hi,I'm Vishal");
+          }
+	abstract public void anotherMethod();
+
+}
+
+//abtraction in inherited class
+package Abstract;
+
+public class Demo extends AbstractClass {
+    
+	public void anotherMethod() {
+		System.out.println("Hi, this is Ramesh");
+	}
+
+	public static void main(String[] args) {
+		
+		AbstractClass obj=new Demo();
+		obj.anotherMethod();    //abstract method
+		obj.Mymethod();        //normal method
+	
+     }
+}
+
+//strings functions
+
+public class StringFunctions {
+	
+	public static void main(String[] args) {
+		
+	char a='V';
+	String b="Ramesh";
+	String c="vishal";
+	System.out.println(b.length());
+	
+	System.out.println(c.charAt(0));
+	
+	System.out.println(c.compareTo(b));  //compare two strings based on their ASCII values
+	
+	System.out.println(b.strip());  //to remove the spaces at the start and at the end of a string
+	
+	System.out.println(c.toUpperCase());   //convert in to upper case
+	
+	System.out.println(c.toLowerCase());   //convert in to lower case
+	
+	System.out.println(c.substring(1,3)); //return substring from position 1 to position 3-1
+	System.out.println(c.substring(3));
+	
+	
+	System.out.println(c.isBlank());  //tell us whether the string is empty                                  or not
+	
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
