@@ -1,0 +1,114 @@
+package Array;
+
+class Dem{
+	String name;
+	int age;
+	int rollno;
+	public void info() {
+		System.out.println("Name- " +name);
+		System.out.println("Age- " +age);
+		System.out.println("Roll No- " +rollno);
+	}
+	
+}
+public class arrayfir {
+	 
+
+	public static void main(String[] args) {
+		Dem obj=new Dem();
+		obj.name="Nikhil";
+		obj.age=22;
+		obj.rollno=2019293;
+		obj.info();
+
+	}
+
+}
+
+
+
+package Array;
+import java.util.*;
+
+public class Arrayinput {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		if(n<=0)
+			System.out.print("Invalid Entry");
+		else {
+			String k[]=new String[n];
+			sc.next();
+			for(int i=0;i<n;i++) {
+				k[i]=sc.nextLine();
+			}
+			String found=sc.next();
+			int i;
+			for(i=0;i<n;i++) {
+				if(k[i].equals(found)) {
+					System.out.println("String is present at index "+i);
+					break;
+				}
+			}
+			if(i==n)
+				System.out.println("Not found");
+		}
+
+	}
+
+}
+
+
+
+package Array;
+
+public class Arraysec {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][]arr=new int[11][10];
+		for(int i=0;i<11;i++) {
+			for(int j=0;j<10;j++)
+				System.out.print(" "+arr[i][j]);
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+
+package Array;
+
+public class search {
+
+	public static void main(String[] args) {
+		int []arr= {1,2,3,45,63,78,95,76};
+		int num=45;
+		int i=0;
+		boolean found=false;
+		for(i=0;i<arr.length;i++) {
+			if(arr[i]==num) {
+				found=true;
+				break;
+			}
+				
+				
+		}
+		i++;
+		if(found) {
+			System.out.println("Number is found at "+ i +" position");
+			
+		}
+		else
+		{
+			System.out.println("Not Found");
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
