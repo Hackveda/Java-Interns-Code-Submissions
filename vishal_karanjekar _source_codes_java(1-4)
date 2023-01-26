@@ -190,13 +190,45 @@ class Matrix
 	public static void main (String[] args) 
 	{    
 
-		int [][]a=new int[15][15];  //10 rows and 10 column
+		int [][]a=new int[15][15];  //defining size
 		for(int i=0;i<=11;i++){
 		    for(int j=0;i<10;j++)
 		    {
 		     System.out.println(a[i][j]);
 		    }
 		     System.out.println();
+		}
+	}
+}
+
+
+//printing elements in an array 
+
+class Array_Demo
+{
+	public static void main (String[] args)
+	{
+		int[] anArray;  //declaration
+
+		anArray=new int[13];  //Allocation 
+
+		//intialization 
+		anArray[0]=15;
+		anArray[1]=26;
+		anArray[2]=65;
+		anArray[3]=200;
+		anArray[4]=300;
+		anArray[5]=100;
+		anArray[6]=400;
+		anArray[7]=500;
+		anArray[8]=600;
+		anArray[9]=700;
+		anArray[10]=800;
+		anArray[11]=900;
+		anArray[12]=10;
+
+		for(int i=0;i<13;i++){
+		    System.out.println("Element at index "+i+": "+anArray[i]);
 		}
 	}
 }
