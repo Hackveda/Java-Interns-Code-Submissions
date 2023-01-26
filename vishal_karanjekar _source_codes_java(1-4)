@@ -151,3 +151,33 @@ class Demo{
  }
  
  }
+
+
+//searching in an array
+
+class DemoArray
+{
+	public static void main (String[] args) 
+	{
+		int[] arrayInt = {32,87,3,589,1076,12,2000,8,622,127}; //declaration of an array
+	
+        int key = 2000;
+        int i;
+        boolean flag = false;
+        for(i=0;i<arrayInt.length;i++)
+        {
+            if(arrayInt[i]==key)
+            {
+                flag=true;
+                break;
+            }
+        }
+        if(flag)  //if flag==true
+        {
+          System.out.println("2000 is present in this array");
+        }
+        else{
+            System.out.println("Not present");
+        }
+	}
+}
