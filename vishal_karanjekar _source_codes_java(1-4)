@@ -123,3 +123,31 @@ public class StringFunctions {
 
 }
 
+
+//lecture 5 source code(vishal_karanjekar)
+//creating class and objects
+
+class Demo{
+    String name;
+    int age;
+    int rollno;
+    
+    public void info()
+    {
+        System.out.println("Name = " + name);
+        System.out.println("Age = " + age);
+        System.out.println("Roll No = " + rollno);
+    }
+
+ 
+
+     public static void main (String[] args)
+ {
+     Demo student=new Demo();
+     student.name="Vishal";
+     student.age=21;
+     student.rollno=272;
+     student.info();
+ }
+ 
+ }
