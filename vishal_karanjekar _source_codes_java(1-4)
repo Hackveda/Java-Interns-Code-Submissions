@@ -115,7 +115,7 @@ public class StringFunctions {
 	System.out.println(c.substring(3));
 	
 	
-	System.out.println(c.isBlank());  //tell us whether the string is empty                                  or not
+	System.out.println(c.isBlank());  //tell us whether the string is empty or not
 	
 		// TODO Auto-generated method stub
 
