@@ -356,3 +356,27 @@ class Vishal
   
   }
 }
+
+
+//nested while loop
+
+class Vishal
+{
+  public static void main(String[] args)
+  {
+      int i=0;
+      int j=0;
+   while(i<4)
+   {
+       while(j<5)
+   {
+    System.out.println("i value:: "+i + " j value:: " +j);
+     j++;
+       
+       i++;
+   }
+    
+  }
+  
+  }
+}
