@@ -287,8 +287,8 @@ class Read_Input
 {
   public static void main(String[] args)
   {
-    int n;
-    Scanner sc= new Scanner(System.in);
+    int n;           // size of the array
+    Scanner sc= new Scanner(System.in);          //reading input
     System.out.println("Enter the number of elements you want to store: ");
     n=sc.nextInt();
     
@@ -297,7 +297,7 @@ class Read_Input
     for(int i=0;i<n;i++)
     {
     array[i]=sc.nextInt();
-    System.out.println(array[i]);
+    System.out.println(array[i]);   //printing elements one by one
     }
   }
 }
