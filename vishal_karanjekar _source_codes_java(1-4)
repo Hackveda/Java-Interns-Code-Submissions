@@ -339,7 +339,7 @@ class TwoDArray
 }
 
 
-//nested loop
+//nested for loop
 
 class Vishal
 {
