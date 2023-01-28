@@ -417,3 +417,43 @@ else
 }
 }
 }
+
+
+//lecture 7 source code(vishal_karanjekar)
+//inheritance in java
+
+
+ public class C extends B{
+
+	public static void main(String[] args) {
+		A a= new A();
+		B b=new B();
+		System.out.println(a.x);
+		System.out.println(b.getb());
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+ class B extends A {
+
+	public int getb() {
+		set(2);
+		return x;
+		// TODO Auto-generated method stub
+
+
+	}
+
+}
+
+class A {
+     	
+	int x=1;
+	void set(int a) {
+		x=a;
+	
+     	}
+}
+
