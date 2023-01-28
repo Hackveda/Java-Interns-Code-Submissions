@@ -457,7 +457,7 @@ class A {
      	}
 }
 
-
+//polymorphism
 //function overloading
 
 public class V extends V1 {
@@ -481,3 +481,33 @@ class V1{
     }
 }
 
+
+
+//function overriding
+
+class Parent {
+    void disp()
+    {
+        System.out.println("Parent's disp()");
+    }
+}
+  
+// Inherited class
+class Child extends Parent {
+  
+    void disp()           //method override
+    {
+        System.out.println("Child's disp()");
+    }
+}
+  
+class Main {
+    public static void main(String[] args)
+    {
+        Parent obj1 = new Parent();
+        obj1.disp();
+  
+        Parent obj2 = new Child();
+        obj2.disp();
+    }
+}
