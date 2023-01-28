@@ -457,7 +457,6 @@ class A {
      	}
 }
 
-//polymorphism
 //function overloading
 
 public class V extends V1 {
@@ -510,4 +509,31 @@ class Main {
         Parent obj2 = new Child();
         obj2.disp();
     }
+}
+
+
+//polymorphism 
+
+class V {
+ 
+    static int sum(int a, int b)     //method 1
+    {
+        return a + b;
+    }
+ 
+     static int sum(int a, int b, int c)    // Method 2
+    {
+        return a + b + c;
+    }
+}
+ 
+class Sum {
+
+    public static void main(String[] args)
+    {
+       // Calling method by passing values
+       
+        System.out.println(V.sum(2, 4));         //method 1
+        System.out.println(V.sum(6,2,9));          // Method 2
+}
 }
