@@ -457,3 +457,24 @@ class A {
      	}
 }
 
+
+//function overloading
+
+public class V extends V1 {
+    public static void main(String[] args) {
+       V obj= new V();   //creating an object
+       obj.disp('x',10);  
+       obj.disp(10,'x');
+       
+    }
+}
+
+class V1{
+    public void disp(char c,int num){
+        System.out.println("1st defination of method"); 
+    }
+    public void disp(int num,char c){
+        System.out.println("2nd defination of method");
+    }
+    
+}
