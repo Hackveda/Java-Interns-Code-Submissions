@@ -537,3 +537,18 @@ class Sum {
         System.out.println(V.sum(6,2,9));          // Method 2
 }
 }
+
+
+
+//lecture 8 source code (vishal_karanjekar)
+//interface
+
+public interface NameOfInterface
+
+{
+  
+  //Any number of final ,static fields
+   
+ //Any number of abstract method declarations
+
+}
