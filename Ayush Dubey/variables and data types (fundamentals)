@@ -429,4 +429,195 @@ public class Practice {
 }
 
 
-	
+
+
+//new
+
+package com.ayush;
+
+public class Q1
+{ 
+     private int a = 15;
+     public int b = 85;
+     protected int c = 75;
+     int d = 19;
+
+}
+
+
+package com.ayush;
+
+public class Q2 extends Q1
+{
+     public static void main(String[] args)
+     {
+      Q2 q= new Q2();
+      //System.out.println(q.a); // showimg error because of private specifier
+      System.out.println(q.b);
+      System.out.println(q.c);
+      System.out.println(q.d);
+      }
+}
+
+
+
+// Testemployee
+
+
+package com.ayush;
+
+public class Practice {
+
+public static void main(String[] args)
+	{
+		Employee e=new Employee();
+		Example1 e1=new Example1();
+		Example2 e2=new Example2();
+		e.name="Ayush";
+		e.age=19;
+		e.salary=25000;
+		
+		e1.name="Aniket";
+		e1.age=18;
+		e1.salary=15000;
+		e1.language="Marathi";
+		
+		e2.name="Arpit";
+		e2.age=20;
+		e2.salary=29500;
+		e2.language="hindi";
+		e2.dataBaseTool="MySql";
+		
+		e.printData();
+		e1.printData();
+		e2.printData();
+	}
+}
+
+//encapsulation
+
+package com.ayush;
+
+private int ayush = 20;
+
+public Class A
+{
+  private int ayush=20;
+  int nikhil = 100;
+}
+
+Class B extends A
+{
+    public static void main(Strings[] args)
+    {
+      B b = new B();
+      System.out.println(b.amit);
+      System.out.println(b.vivek);
+    }
+}
+
+//27
+
+package com.ayush;
+
+public class Practice1
+ {  
+    //private data members  
+     private long acc_no;  
+     private String name,email;  
+     private float amount;  
+     //public getter and setter methods  
+    public long getAcc_no()
+    {  
+       return acc_no;  
+     }  
+    public void setAcc_no(long acc_no)
+    {  
+      this.acc_no = acc_no;  
+    }  
+    public String getName() 
+    {  
+      return name;  
+    }  
+    public void setName(String name) 
+    {  
+    this.name = name;  
+    }  
+    public String getEmail() 
+    {  
+    return email;  
+    }  
+    public void setEmail(String email)
+    {  
+    this.email = email;  
+    }  
+    public float getAmount()
+    {  
+    return amount;  
+    }  
+    public void setAmount(float amount)
+    {  
+    this.amount = amount;  
+    }  
+  
+}
+
+//exceptionh28
+
+package com.ayush;
+
+import java.io.PrintStream;
+import java.util.*;
+
+
+public class ExceptionHandlingClass {
+
+	public static void main(String[] args) {
+
+		  {
+			    Scanner sc = new Scanner(System.in);
+			    System.out.println("Enter first number");
+			    int x = sc.nextInt();
+			    System.out.println("Enter second number");
+			    int y = sc.nextInt();
+			    int z = add(x, y);
+			    System.out.println("Answer is:"+ z);}
+			  }
+			  
+			  private static int add(int a, int b)
+			  {
+			    int sum = 0;
+			    try
+			    {
+			      sum = a + b;
+			    }
+			    catch (Exception e)
+			    {
+			      System.out.println("Only integers allowed");
+			    }
+			    finally
+			    {
+			      System.out.println("Executed");
+			    }
+			    return sum;
+			  }
+
+}
+
+//ThrowException29
+
+public class ThrowExceptionClass
+{
+    public static void main(final String[] args) {
+        final Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your age");
+        final int age = sc.nextInt();
+        if (age <= 0) {
+            throw new NumberFormatException();
+        }
+        if (age >= 120) {
+            throw new NumberFormatException();
+        }
+        System.out.println("max heart rate is " + (220 - age));
+    }
+}
