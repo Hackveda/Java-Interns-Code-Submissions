@@ -552,3 +552,55 @@ public interface NameOfInterface
  //Any number of abstract method declarations
 
 }
+
+
+// example of an interface 
+
+
+interface Bank
+{
+    float rateOfInterest();    //after compilation it will convert into abstract static
+}
+
+
+class PNB implements Bank
+
+{
+    
+public float rateOfInterest()
+    {
+   
+     return 9.7f;
+   
+ }
+
+}
+
+class SB implements Bank
+{
+    
+public float rateOfInterest()
+    {
+     
+   return 9.15f;
+    
+}
+
+}
+
+class Test 
+{
+   
+ public static void main(String[] args)
+    {
+ 
+       Bank b= new SB();
+      
+     Bank p=new PNB();
+       
+ System.out.println("ROI: " +b.rateOfInterest());
+        System.out.println("ROI: " +p.rateOfInterest());
+ 
+   }
+
+}
