@@ -604,3 +604,36 @@ class Test
    }
 
 }
+
+
+//multiple inheritance using interface
+
+interface Printable{
+    void print();
+}
+interface Showable{
+   void show();
+}
+class Exercise implements Printable,Showable{
+   @Override
+    public void show() {
+        System.out.println("Showable ");
+        
+    }
+    @Override
+     public void print() {
+        System.out.println("Printable");
+        
+    }
+    
+}
+
+class Interfaces{
+    public static void main(String args[]) {
+        
+       Exercise obj =new Exercise();
+         obj.show();
+         obj.print();
+         
+    }
+}
