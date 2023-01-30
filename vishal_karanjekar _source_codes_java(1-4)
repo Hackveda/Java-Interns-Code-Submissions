@@ -665,3 +665,28 @@ public class B extends A
    
 }
 
+
+
+//encapsulation
+
+private int vishal = 10;
+
+class A
+{
+ private int vishal=10;
+  int rishabh = 100;
+}
+
+
+
+public Class B extends A
+{
+    public static void main(String[] args)
+    {
+      B b = new B();
+      System.out.println(b.rishabh);
+      System.out.println(b.vishal);
+    }
+}
+
+
