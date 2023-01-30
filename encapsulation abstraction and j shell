@@ -1,0 +1,115 @@
+Encapsulation
+package encapsulation;
+ class a {
+private int anu=10;
+int amit =100;
+}
+
+package encapsulation;
+
+class B extends a {
+	int speed=0;
+	int gear=1;
+	private void Gearup() {
+		gear++;
+		System.out.println("The Gear is up");
+	}
+	public void Speedup() {
+		speed++;
+		System.out.println("The Speed is up");
+	}
+	void state() {
+		System.out.println("Speed" + speed +"Gear"+ gear); 
+	}
+
+}
+
+
+Abstraction-:
+package abstraction;
+
+public class Q1 {
+	public int m=53;
+	private int n=34;
+	protected int z=26;
+	 int g=87;
+
+}
+
+package abstraction;
+
+public class Q2 {
+	public static void main(String[] args) {
+		Q1 q=new Q1();
+		System.out.println(q.m);
+		System.out.println(q.n);// this give error because it's acess specifier is private
+		System.out.println(q.z);
+		System.out.println(q.g);
+	}
+
+}
+
+
+
+
+Jshell-:
+jshell> System.out.println("Hello jshell")
+Hello jshell
+
+jshell> int x=45
+x ==> 45
+
+jshell> System.out.println(x);
+45
+
+jshell> String s = "Nikhil";
+s ==> "Nikhil"
+
+jshell> System.out.println(s);
+Nikhil
+
+
+jshell> 1+1
+$10 ==> 2
+
+jshell> 2
+$11 ==> 2
+
+jshell> 1
+$12 ==> 1
+
+jshell> 3
+$13 ==> 3
+
+jshell> /exit
+|  Goodbye
+
+C:\Users\rockz>jshell
+|  Welcome to JShell -- Version 19.0.2
+|  For an introduction type: /help intro
+
+
+jshell> String twice(String s){
+   ...> return s+s;}
+|  created method twice(String)
+
+jshell> twice("sea")
+$2 ==> "seasea"
+|  created scratch variable $2 : String
+
+jshell> System.out.println(twice("sea"))
+seasea
+
+
+jshell> /vars
+|    String $2 = "seasea"
+
+jshell> /methods
+|    String twice(String)
+
+jshell> /list
+
+   1 : String twice(String s){
+       return s+s;}
+   2 : twice("sea")
+   3 : System.out.println(twice("sea"))
