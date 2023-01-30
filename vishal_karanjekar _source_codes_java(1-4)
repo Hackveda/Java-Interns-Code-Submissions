@@ -649,18 +649,19 @@ public class B extends A
      public static void main(String[] args)
      {
       B b=new B();
+      System.out.println(b.w);
       //System.out.println(q.x);     //this one is showing error because 'x' is private so can't be accessed from this class
       System.out.println(b.y);
       System.out.println(b.z);
-      System.out.println(b.w);
-      }
+       }
 }
 
  class A
 { 
-     private int x =23;
+      int w = 10;
+      private int x =23;
      public int y = 15;
      protected int z = 50;
-     int w = 10;
+   
 }
 
