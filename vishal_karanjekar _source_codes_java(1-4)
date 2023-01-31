@@ -690,3 +690,44 @@ public Class B extends A
 }
 
 
+
+//lecture 11 source code (vishal_karanjekar)
+//jshell
+
+
+jshell> 1
+$1 ==> 1
+
+jshell> 5
+$2 ==> 5
+
+
+jshell> 2+3
+$3 ==> 5
+
+
+jshell> 3*4
+$4 ==> 12
+
+jshell> 
+        String print(String s){
+   ...>     return s+s;
+   ...> }
+|   created method print(String)
+
+
+jshell> print("Vishal")
+$6 ==> "vishalvishal"
+        
+jshell> int x=5
+x ==> 5
+
+jshell> 
+        int sum(int x,int y){
+   ...>     return x+y;
+   ...> }
+|   created method sum(int,int)
+
+jshell> sum(12,13)
+$9 ==> 25
+
