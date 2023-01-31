@@ -739,7 +739,7 @@ $9 ==> 25
 
 import java.util.ArrayList;
 
- class Program_1
+ class A
 {
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<Integer>();
