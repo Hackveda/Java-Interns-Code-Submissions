@@ -1,0 +1,162 @@
+/LAMBDA EXPRESSIONS
+
+
+
+JButton btn = new JButton("Click");
+btn.addActionListener(
+    evt -> System.out.println("Button clicked!"));
+
+
+
+//programex
+
+package lambda8;
+import java.util.ArrayList;
+public class Program_1
+{
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(5);
+        numbers.add(9);
+        numbers.add(8);
+        numbers.add(1);
+        numbers.add(10);
+        numbers.forEach( (i) -> {System.out.println(i); });
+      }
+  }
+
+//program2.java
+
+package lambda8;
+ 
+ public interface Program_2
+ {
+     public void draw();//abstract method
+
+  }
+
+//program3.java
+
+ package lambda8;
+ 
+ public class Program_3
+ {
+    public static void main(String[] args)
+    {
+       int width=10;
+
+       Program_2 d=new Program_2()
+       { 
+          public void draw()
+            {
+
+               System.out.println("Drawing "+width);
+          
+             }
+        };
+       d.draw();
+   }
+}
+       
+//program4.java
+
+package lambda8;
+
+ interface Program_4
+ {
+    public String say();
+ }
+
+//program5.java
+
+package lambda8;
+ class Program_5
+ {
+  public static void main(String[] args)
+  { 
+     Program_4 p=()->{return "I habe nothing to say. ";); //sum()
+     System.out.println(p.say());
+
+   }
+ }
+
+
+//program6.java
+
+
+package lambda8;
+
+ public interface Program_6
+ {
+    void abstractFun(int x); //An abstarct function
+
+   default void normalFun()   //A non-abstract function
+    {
+      System.out.println("Hell");
+     }
+  }
+
+//program7.java
+
+package lambda8;
+
+  public class Program_7
+  {
+     public static void main(String args[])
+      {
+           //by default implements abstarctFun()
+
+        Program_6 fobj = (int x)->(System.out.println(2*x);};
+
+        //this calls above lambda expression and prints 10.
+
+       fobj.abstractFun(5);
+       fobj.normalFun();
+     }
+  }
+
+
+//program8.java
+
+package lambda8;
+
+import java.util.ArrayList;
+class Program_8
+{
+   public static void main(String args[])
+   {
+        ArrayList<Integer> arrL = new ArrayList<Integer>();
+        arrl.add(1);
+        arrl.add(2);
+        arrl.add(3);
+        arrl.add(4);
+
+   // using lambda expresssion to print all elements of arrL
+     
+      arrL.forEach(n -> System.out.println(n));
+
+  // using lambda expressions to print even elements
+
+       arr.forEach(n ->{if (n%2==0) System.out.println(n);});
+    }
+}
+
+
+//program9.java
+
+package lambda8;
+
+public class Program_9
+{
+    //operation is implemented using lambda expression 
+    interface FuncInter1
+    {
+        int operation(int a,int b);
+     }
+     //sayMessage() is implemented using lambda expressions
+     
+     interface FuncInter2
+     {
+         void sayMessage(String message);
+     }
+}
