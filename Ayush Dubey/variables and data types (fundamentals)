@@ -707,3 +707,6 @@ throw new NumberformatException()
 
 }
 }
+
+//List interface and Arraylist
+
