@@ -604,4 +604,106 @@ public class ExceptionHandlingClass {
 
 }
 
-//
+
+//exception test  (try and catch)
+
+
+
+import Java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Exceptiontest {
+
+public static void main (String[] args) {
+
+try{
+System.out.println( " Welcome to Max Heartrate Calculator" );
+Scanner sc= new Scanner (System.in);
+
+System.out.println(" Please enter your age: ");
+int age =sc.nextInt();
+
+int maxheartrate =220 - age ;
+
+System.out.println(" Max heart rate is  " + maxheartrate);
+} catch (InputMismatchException e) {
+System.out.println("Please enter integer only");
+}
+
+}
+}
+
+//exception test (try and catch) 2
+
+import Java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Exceptiontest {
+
+public static void main (String[] args) {
+
+try{
+System.out.println( " Welcome to Max Heartrate Calculator" );
+Scanner sc= new Scanner (System.in);
+
+System.out.println(" Please enter your age: ");
+int age =sc.nextInt();
+
+int maxheartrate =220 - age ;
+
+System.out.println(" Max heart rate is  " + maxheartrate);
+} catch (Exception e) {
+System.out.println(e.getMessage());
+}
+
+}
+}
+
+//ThrowException
+public class ThrowExceptionClass
+{
+    public static void main(final String[] args) {
+        final Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your age");
+        final int age = sc.nextInt();
+        if (age <= 0) {
+            throw new NumberFormatException();
+        }
+        if (age >= 120) {
+            throw new NumberFormatException();
+        }
+        System.out.println("max heart rate is " + (220 - age));
+    }
+}
+
+//Chained exceptions
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ChainedExceptions {
+
+public static void main (String[] args) {
+
+try{
+
+Scanner sc= new Scanner (System.in);
+
+/* Standard ideal weight calculation formula 
+50 +( 0.91 * (height - 152.4) )
+*/
+
+System.out.println(" Please enter your height in cms: ");
+float height =sc.nextFloat();
+
+double idealweight = 50 +( 0.91 * (height - 152.4) )  ;
+
+System.out.println(" Your ideal weight is  " + idealweight);
+} catch (InputMismatchException e) {
+throw new NumberformatException()
+
+
+}
+
+}
+}
