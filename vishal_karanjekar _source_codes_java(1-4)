@@ -753,3 +753,17 @@ import java.util.ArrayList;
   }
 
 
+
+//lecture 1 data structures (vishal_karanjekar)
+//Exception Handling
+
+public class ExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        //String age="33";//error (exception handling)
+        int age = 33;
+        int maxheartrate = 220 - age ;
+        System.out.println("Max heart rate is = " + maxheartrate);
+    }
+}
