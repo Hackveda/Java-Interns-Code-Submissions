@@ -796,3 +796,33 @@ at java.base/java.util.Scanner.next(Scanner.java:1594)
 	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
 	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
 at ExceptionTest.main(ExceptionTest.java:14)
+
+
+//Exception Handling
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+ class ExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        //exception handling
+        try{
+        System.out.println("Welcome to Max Heart Rate Calculator");
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Please enter your age : ");
+        int age =sc.nextInt();
+        int maxheartrate = 220 - age ;
+        System.out.println("Max heart rate is = " + maxheartrate);
+    }catch(InputMismatchException e){
+        System.out.println("Please enter integer only");
+    }
+    }
+}
+
+output:  Welcome to Max Heart Rate Calculator
+Please enter your age : Twenty One
+Please enter integer only
+
