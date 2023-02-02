@@ -826,3 +826,39 @@ output:  Welcome to Max Heart Rate Calculator
 Please enter your age : Twenty One
 Please enter integer only
 
+
+
+//lecture 2 DSA souce code(vishal_karanjekar)
+//Advanced Exception Handling
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+ class ExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        //exception handling
+        try{
+        System.out.println("Welcome to Max Heart Rate Calculator");
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Please enter your age : ");
+        int age =sc.nextInt();
+        int maxheartrate = 220 - age ;
+        System.out.println("Max heart rate is = " + maxheartrate);
+    }catch(Exception e){
+         System.out.println("Please enter integer only");
+          System.out.println(e.getLocalizedMessage());
+          System.out.println(e.getMessage());
+        
+        }
+    }
+}
+output:
+Welcome to Max Heart Rate Calculator
+Please enter your age : 
+twenty one
+Please enter integer only
+null
+null
