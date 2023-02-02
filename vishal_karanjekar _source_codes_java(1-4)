@@ -925,3 +925,31 @@ import java.util.Scanner;
       
       }
  }
+ 
+ 
+ //chained exception 
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ChainedException {
+
+	public static void main(String[] args)
+	{
+		try
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Please enter your height in cm ");
+			float height =sc.nextInt();  
+			
+			double idealWeight=50+(0.91*(height-152.4)); //Standard ideal weight
+
+			System.out.println("your ideal weight is : "+idealWeight);
+		}
+		catch(InputMismatchException e)
+		{
+			throw new NumberFormatException();
+		}
+		
+	}
+}
