@@ -953,3 +953,64 @@ public class ChainedException {
 		
 	}
 }
+
+
+
+//lecture 3 (DSA) source code(vishal_karanjekar)
+//Lists interface and arraylist in java
+
+import java.util.ArrayList;
+
+public class MyArrayListTest{
+    
+    public static void main(String[] args){
+      ArrayList  myArrayList= new ArrayList();
+      myArrayList.add(1);
+        myArrayList.add(2);
+          myArrayList.add(3);
+            myArrayList.add(4);
+              myArrayList.add(5);
+     System.out.println("printing list 1: ");
+      System.out.println(myArrayList.get(1));
+      System.out.println(myArrayList.get(0));
+      System.out.println(myArrayList.get(4));
+      
+      
+     System.out.println("updating elements");
+      myArrayList.add(1,6);
+      System.out.println(myArrayList.get(1));
+      
+       ArrayList List2= new ArrayList();
+      List2.addAll(myArrayList);
+      
+      System.out.println("printing list 2: ");
+      System.out.println(List2.get(1));
+      System.out.println(List2.get(0));
+      System.out.println(List2.get(4));
+      
+      List2.clear();
+      try{
+          System.out.println("printing list 2: ");
+      System.out.println(List2.get(1));
+      System.out.println(List2.get(0));
+      System.out.println(List2.get(4));
+      }catch(IndexOutOfBoundsException e){
+          System.out.println("list is cleared");
+      }
+      
+     ArrayList myArrayListClone = (ArrayList) myArrayList.clone();
+      System.out.println("printing from my arraylist clone");
+      System.out.println(myArrayListClone.get(1));
+      System.out.println(myArrayListClone.get(0));
+      System.out.println(myArrayListClone.get(4));
+      
+      System.out.println("check if my arraylist clone contains 6");
+      boolean result=myArrayListClone.contains(6);
+      if(result){
+          System.out.println("item exists");
+      }
+      else{
+           System.out.println("item does not exist");
+          }
+    }
+}
