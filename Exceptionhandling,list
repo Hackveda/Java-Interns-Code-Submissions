@@ -1,0 +1,180 @@
+Exception Handling:-
+//The Exception Handling in Java is one of the powerful mechanism to handle 
+//the runtime errors so that the normal flow of the application can be maintained.
+
+
+import java.util.Scanner;
+
+public class ExeptionTest {
+
+	    public static void main(String[] args){
+
+	        System.out.println("Welcom to Max Heart Rate Calculator");
+
+	        Scanner sc = new SCaneer(Sysytem.in);
+
+	        System.out.println("ENter your age: ");
+	        int age = sc.nextInt();
+
+	        int maxHeartRate = 220 - age;
+
+	        System.out.println("Your max heart rate is: " + maxHeartRate);
+	    }
+
+}
+
+
+//try and catch method
+
+import java.util.Scanner;
+
+public class ExeptionTest {
+
+	    public static void main(String[] args){
+
+	    	try {
+	        System.out.println("Welcom to Max Heart Rate Calculator");
+
+	        Scanner sc = new SCaneer(Sysytem.in);
+
+	        System.out.println("ENter your age: ");
+	        int age = sc.nextInt();
+
+	        int maxHeartRate = 220 - age;
+
+	        System.out.println("Your max heart rate is: " + maxHeartRate);
+	    } catch(InputMismtachException e){
+
+	    	System.out.println("Please entre Integer only: ");
+
+	    }
+	 }
+
+}
+
+
+//throw exception
+
+import java.util.Scanner;
+
+public class throwExceptionTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter your age: ");
+		
+		int age = sc.nextInt();
+		
+		if(age <= 0) {
+			
+			throw new NumberFormatException();
+		} else if(age >= 120) {
+			
+			throw new NumberFormatException();
+			
+		}
+		
+		System.out.println("Max HeartRate is:" + (220 - age));
+
+	}
+
+}
+
+
+
+//chained Exception
+
+public class ChainedExceptions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter your height in cms: ");
+		
+		float height = sc.nextFloat();
+		
+		double idealWeight = 50 + (0.91 + (height - 170));
+		
+		System.out.println("Your ideal height is: " + idealWeight);
+	} catch(InputMismatchException e) {
+		throw new NumberFormatException();
+	}
+
+	}
+
+
+//Java ArrayList class uses a dynamic array for storing the elements.It 
+//is like an array, but there is no size limit. We can add or remove 
+//elements anytime.
+
+//Examole of Array List
+
+import java.util.ArrayList;
+
+public class MyArrayListTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<E> list = new ArrayList();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+
+		System.out.println(list.get(1));
+		System.out.println(list.get(2));
+		System.out.println(list.get(3));
+
+		list.add(1, 6);
+
+		System.out.println(list.get(1));
+
+    //addAll 
+		ArrayList list2 = new ArrayList();
+		list.addAll(list2);
+
+		System.out.println(list2.get(0));
+		System.out.println(list2.get(1));
+		System.out.println(list2.get(3));
+
+		list2.clear();
+
+    //try and catch for index out of bound
+		try {
+			System.out.println(list.get(0));
+			System.out.println(list.get(1));
+			System.out.println(list.get(3));
+		} catch(IndexOutOfBoundException e){
+
+			System.out.println("List is cleared");
+
+		}
+
+		ArrayList listClone = (ArrayList) list.clone();
+
+		System.out.println("Clear the list after cloning");
+
+		list.clear();
+
+		System.out.println("Printing the clone of the list");
+		System.out.println(listClone.get(0));
+		System.out.println(listClone.get(1));
+		System.out.println(listClone.get(3));
+
+    //contains
+		System.out.println("Checking if it contains 6");
+		boolean res = listClone.contains(6);
+		if(result) {
+			System.out.println("6 Exists");
+		}else {
+			System.out.println("6 Doesn't Exists");
+		}
+
+	}
+
+}
