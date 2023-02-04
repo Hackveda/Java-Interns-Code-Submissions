@@ -1014,3 +1014,25 @@ public class MyArrayListTest{
           }
     }
 }
+
+
+
+//lecture 4 (DSA) source code (vishal_karanjekar)
+//stacks in java
+
+import java.util.Stack;
+
+public class MyStack{
+    public static void main(String[] args){
+        Stack intStack = new Stack<Integer>();
+        System.out.println("Is stack empty " + intStack.empty());
+        intStack.push(10);
+          intStack.push(20);
+            intStack.push(30);
+        System.out.println(" Get the top element " + intStack.peek());
+        System.out.println("Is stack contains 20 "+ intStack.search(20));
+        intStack.pop();
+        System.out.println("Top element after pop "+ intStack.peek());
+    }
+}
+
