@@ -1036,3 +1036,35 @@ public class MyStack{
     }
 }
 
+
+
+//ArrayDeque
+
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+public class StackUsingDeque{
+     public static void main(String[] args)
+       {
+             ArrayDeque myDeque = new ArrayDeque<String>();
+
+             myDeque.add(" Vishal ");
+             myDeque.addFirst(" Rishabh ");
+             myDeque.addLast(" New Person ");
+
+             myDeque.offerFirst(" Ram ");  //at the first
+             myDeque.offer(" Lakhan ");    //at the last
+
+             System.out.println(" First Element: " + myDeque.getFirst());
+             System.out.println(" Last Element: " + myDeque.getLast());
+             System.out.println(" Deque contains Rishabh: " + myDeque.contains(" Rishabh "));
+
+             System.out.println("Iterating all the elements in descending order");
+
+             Iterator<String> myIterator = myDeque.descendingIterator();
+
+              while(myIterator.hasNext()) {
+                    System.out.println(myIterator.next());
+              }
+         }
+}
