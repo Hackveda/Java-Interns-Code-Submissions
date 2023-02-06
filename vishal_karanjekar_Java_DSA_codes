@@ -1,1 +1,41 @@
+//lecture 5 (DSA) source code(vishal_karanjekar)
+//priority queue
 
+import java.util.PriorityQueue;
+import java.util.Iterator;
+
+ class myPriorityQueue{
+    public static void main(String[] args){
+        PriorityQueue pq = new PriorityQueue();
+        System.out.println("is PQ empty:  "+ pq.isEmpty());
+        
+        
+        PriorityQueue pq1 = new PriorityQueue();
+        
+        pq.add(10);
+         pq1.add(10);
+         
+         pq.add(5);
+         pq1.add(5);
+         
+         pq.add(100);
+         pq1.add(100);
+         
+          Iterator pqIter= pq.iterator();
+          Iterator pq1Iter= pq1.iterator();
+          
+        System.out.println("pq Priority Queue");
+           
+          while(pqIter.hasNext()){
+              System.out.println(pqIter.next());
+              
+          }
+          
+        System.out.println("pq1 Priority Queue");
+              
+           while(pq1Iter.hasNext()){
+              System.out.println(pq1Iter.next());
+              
+          }
+    }
+}
