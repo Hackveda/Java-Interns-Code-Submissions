@@ -39,3 +39,53 @@ import java.util.Iterator;
           }
     }
 }
+
+
+
+// lecture 6 (DSA) source code(vishal_karanjekar)
+//ArrayList using parallel processing using Spliterator
+
+import java.util.ArrayList;
+import java.util.Spliterator;
+
+public class MySpliteratorTest{
+    
+    public static void main(String[] args){
+        
+     ArrayList<String> fbPosts =new ArrayList<String>();
+    
+     fbPosts.add("post1");
+     fbPosts.add("post2");
+     fbPosts.add("post3");
+     fbPosts.add("post4");
+     fbPosts.add("post5");
+     fbPosts.add("post6");
+        
+     //Parrallely process the List using Spliterator
+     
+     Spliterator<String> splIterator =fbPosts.spliterator();
+       Spliterator<String> splIterator2 = splIterator.trySplit();
+      
+      
+      System.out.println("spl1 Estimated size of data: " + splIterator.estimateSize());
+     System.out.println("spl1 Exact size: "+ splIterator.getExactSizeIfKnown());
+     
+      splIterator.forEachRemaining(System.out::println);
+  
+     System.out.println("spl1 Estimated size of data: " + splIterator.estimateSize());
+     System.out.println("spl1 Exact size: "+ splIterator.getExactSizeIfKnown());
+     
+     
+     
+    System.out.println("spl2 Estimated size of data: " + splIterator2.estimateSize());
+     System.out.println("spl2 Exact size: "+ splIterator2.getExactSizeIfKnown());
+     
+     splIterator2.forEachRemaining(System.out::println);
+  
+     System.out.println("spl2 Estimated size of data: " + splIterator2.estimateSize());
+     System.out.println("spl2 Exact size: "+ splIterator2.getExactSizeIfKnown());
+     
+  
+    } 
+     
+}
