@@ -89,3 +89,29 @@ public class MySpliteratorTest{
     } 
      
 }
+
+
+// lecture 7 (DSA) source code(vishal_karanjekar)
+//ArrayList to Array
+
+import java.util.ArrayList;
+
+public class ToArrayTest{
+    
+    public static void main(String[] args){
+        
+     ArrayList<String> partyGuests =new ArrayList<String>();
+    
+    partyGuests.add("Vishal");
+      partyGuests.add("Ramesh");
+      partyGuests.add("Harsh");
+    partyGuests.add("Rohan");
+    
+    Object[] arrayGuests = partyGuests.toArray();
+    
+    System.out.println("Elements at Index O for array: " + arrayGuests[0]);
+     System.out.println("Hashcode of the array: " + arrayGuests.hashCode());
+    
+         } 
+     
+}
