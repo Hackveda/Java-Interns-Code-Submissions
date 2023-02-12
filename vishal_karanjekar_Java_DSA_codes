@@ -404,3 +404,42 @@ public class BinaryTree{
         }
     }
 }
+
+
+//lecture 12(DSA) source code(vishal_karanjekar)
+//single and multiple inheritance in java
+
+
+public class BmiMachine extends HeartMonitor{
+
+	public static void main(String[] args)
+	{
+		System.out.println(getMaxHeartRate(20));
+	}
+	public static int getMaxHeartRate(int age)
+	{
+		System.out.println("method executed from Sub Class");
+		return 230-age;
+	}
+	
+}
+}
+
+public class HeartMonitor {
+	
+	public String maxHeartRate;
+	public static void main(String[] args)
+   {
+		System.out.println(getMaxHeartRate(20));
+		
+	}
+	public static int getMaxHeartRate(int age)
+	{
+		System.out.println("Base Class");
+		int res=0;
+		res=230-age;
+		return res;
+	}
+}
+
+
