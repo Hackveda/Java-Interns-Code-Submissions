@@ -981,3 +981,92 @@ public class Main {
 
     }
 }
+
+// Implementation of caesor cipher 
+
+import java.util.Scanner;  
+
+public class CaesarCipher {
+    public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+
+        // prompt the user to enter the secret key
+        System.out.print("Enter secret key: ");
+
+        // read in the secret key entered by the user
+        int key = scanner.nextInt();
+
+        // consume the remaining newline character in the input buffer
+        scanner.nextLine();
+
+        // prompt the user to enter the plain text message
+        System.out.print("Enter plain text message: ");
+
+        // read in the plain text message entered by the user
+        String plainText = scanner.nextLine();
+
+        // create a string to store the cipher text
+        String cipherText = "";
+
+        // iterate over each character in the plain text message
+        for (int i = 0; i < plainText.length(); i++) {
+            // get the i-th character from the plain text message
+            char c = plainText.charAt(i);
+
+            // check if the character is a letter
+            if (Character.isLetter(c)) {
+                // calculate the shifted character using the secret key
+                char shifted = (char) (c + key);
+
+                // wrap around to the beginning of the alphabet if necessary
+                if (Character.isLowerCase(c) && shifted > 'z') {
+                    shifted -= 26;
+                } else if (Character.isUpperCase(c) && shifted > 'Z') {
+                    shifted -= 26;
+                }
+
+                // add the shifted character to the cipher text
+                cipherText += shifted;
+            } else {
+                // add non-letter characters as is to the cipher text
+                cipherText += c;
+            }
+        }
+
+        // print the cipher text to the console
+        System.out.println("Cipher text: " + cipherText);
+
+        // create a string to store the decrypted text
+        String decryptedText = "";
+
+        // iterate over each character in the cipher text
+        for (int i = 0; i < cipherText.length(); i++) {
+            // get the i-th character from the cipher text
+            char c = cipherText.charAt(i);
+
+            // check if the character is a letter
+            if (Character.isLetter(c)) {
+                // calculate the shifted character using the secret key
+                char shifted = (char) (c - key);
+
+                // wrap around to the end of the alphabet if necessary
+                if (Character.isLowerCase(c) && shifted < 'a') {
+                    shifted += 26;
+                } else if (Character.isUpperCase(c) && shifted < 'A') {
+                    shifted += 26;
+                }
+
+                // add the shifted character to the decrypted text
+                decryptedText += shifted;
+            } else {
+                // add non-letter characters as is to the decrypted text
+                decryptedText += c;
+            }
+        }
+
+        System.out.println("Decrypted text: " + decryptedText);
+	
+        scanner.close();
+    }
+}
