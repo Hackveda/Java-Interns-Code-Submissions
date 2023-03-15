@@ -1,0 +1,540 @@
+//lecture 5 (DSA) source code(vishal_karanjekar)
+//priority queue
+
+import java.util.PriorityQueue;
+import java.util.Iterator;
+
+ class myPriorityQueue{
+    public static void main(String[] args){
+        PriorityQueue pq = new PriorityQueue();
+        System.out.println("is PQ empty:  "+ pq.isEmpty());
+        
+        
+        PriorityQueue pq1 = new PriorityQueue();
+        
+        pq.add(10);
+         pq1.add(10);
+         
+         pq.add(5);
+         pq1.add(5);
+         
+         pq.add(100);
+         pq1.add(100);
+         
+          Iterator pqIter= pq.iterator();
+          Iterator pq1Iter= pq1.iterator();
+          
+        System.out.println("pq Priority Queue");
+           
+          while(pqIter.hasNext()){
+              System.out.println(pqIter.next());
+              
+          }
+          
+        System.out.println("pq1 Priority Queue");
+              
+           while(pq1Iter.hasNext()){
+              System.out.println(pq1Iter.next());
+              
+          }
+    }
+}
+
+
+
+// lecture 6 (DSA) source code(vishal_karanjekar)
+//ArrayList using parallel processing using Spliterator
+
+import java.util.ArrayList;
+import java.util.Spliterator;
+
+public class MySpliteratorTest{
+    
+    public static void main(String[] args){
+        
+     ArrayList<String> fbPosts =new ArrayList<String>();
+    
+     fbPosts.add("post1");
+     fbPosts.add("post2");
+     fbPosts.add("post3");
+     fbPosts.add("post4");
+     fbPosts.add("post5");
+     fbPosts.add("post6");
+        
+     //Parrallely process the List using Spliterator
+     
+     Spliterator<String> splIterator =fbPosts.spliterator();
+       Spliterator<String> splIterator2 = splIterator.trySplit();
+      
+      
+      System.out.println("spl1 Estimated size of data: " + splIterator.estimateSize());
+     System.out.println("spl1 Exact size: "+ splIterator.getExactSizeIfKnown());
+     
+      splIterator.forEachRemaining(System.out::println);
+  
+     System.out.println("spl1 Estimated size of data: " + splIterator.estimateSize());
+     System.out.println("spl1 Exact size: "+ splIterator.getExactSizeIfKnown());
+     
+     
+     
+    System.out.println("spl2 Estimated size of data: " + splIterator2.estimateSize());
+     System.out.println("spl2 Exact size: "+ splIterator2.getExactSizeIfKnown());
+     
+     splIterator2.forEachRemaining(System.out::println);
+  
+     System.out.println("spl2 Estimated size of data: " + splIterator2.estimateSize());
+     System.out.println("spl2 Exact size: "+ splIterator2.getExactSizeIfKnown());
+     
+  
+    } 
+     
+}
+
+
+// lecture 7 (DSA) source code(vishal_karanjekar)
+//ArrayList to Array
+
+import java.util.ArrayList;
+
+public class ToArrayTest{
+    
+    public static void main(String[] args){
+        
+     ArrayList<String> partyGuests =new ArrayList<String>();
+    
+    partyGuests.add("Vishal");
+      partyGuests.add("Ramesh");
+      partyGuests.add("Harsh");
+    partyGuests.add("Rohan");
+    
+    Object[] arrayGuests = partyGuests.toArray();
+    
+    System.out.println("Elements at Index O for array: " + arrayGuests[0]);
+     System.out.println("Hashcode of the array: " + arrayGuests.hashCode());
+    
+         } 
+     
+}
+
+
+
+// lecture 8 (DSA) sorce code (vishal_karanjekar)
+//binary tree 
+
+public class BinaryTree{
+    public static void main(String[] args){
+      Node node=new Node(10);
+      node.left=new Node(4);
+      node.right=new Node(5);
+      
+     
+    }
+    
+    static class Node{
+        int value;//The value or data to be stored in the node
+        Node left,right;  //Pointers to the left and right node
+        Node(int value){
+            this.value=value;
+            left=null;
+            right=null;
+             }
+    }
+}
+
+
+
+// lecture 9 (DSA) sorce code (vishal_karanjekar)
+//Tree in java 
+
+ public class MyTreeTest{
+    public static void main(String[] args){
+        Tree tree =new Tree();
+        Tree.Node root=new Tree.Node(5);
+        
+        tree.insert(root,2);
+        tree.insert(root,4);
+        tree.insert(root,6);
+        tree.insert(root,7);
+        tree.insert(root,3);
+        tree.insert(root,9);
+       System.out.println("Traverse the tree");
+          tree.traverseInOrder(root);
+    }
+ 
+
+    public static class Tree{
+       static class Node{
+           int value;
+           Node left ,right;
+           
+           Node(int value){
+               this.value=value;
+               left=null;
+               right=null;
+             }
+        }
+     
+ public void insert(Node node,int value){
+    if(value<node.value){
+        if(node.left!=null){
+            insert(node.left,value);
+        }
+        else{
+            System.out.println("Inserted " +value + "to the left of " + node.value);
+            node.left= new Node(value);
+        }
+    }else if(value>node.value){
+        if(node.right!=null){
+            insert(node.right,value);
+            }
+            else{
+                node.right= new Node(value);
+                System.out.println("Inserted " +value + "to the right of " + node.value);
+            }
+    }
+        }
+        
+      public void traverseInOrder(Node node){
+            if(node!=null){
+                traverseInOrder(node.left);
+                System.out.println(" " +node.value);
+                 traverseInOrder(node.right);
+                
+            }
+        }
+    }
+}
+
+
+
+
+//lecture 10 (DSA) source code(vishal_karanjekar)
+ //preorder and postorder traversal in tree
+ 
+ 
+ public class MyTreeTest{
+    public static void main(String[] args){
+        Tree tree =new Tree();
+        Tree.Node root=new Tree.Node(5);
+
+        tree.insert(root,2);
+        tree.insert(root,4);
+        tree.insert(root,6);
+        tree.insert(root,7);
+        tree.insert(root,3);
+        tree.insert(root,9);
+       System.out.println("preorder: ");
+          tree.traversePreOrder(root);
+        
+          System.out.println("postorder: ");
+          tree.traversePostOrder(root);
+    }
+
+
+    public static class Tree{
+       static class Node{
+           int value;
+           Node left ,right;
+
+           Node(int value){
+               this.value=value;
+               left=null;
+               right=null;
+             }
+        }
+
+ public void insert(Node node,int value){
+    if(value<node.value){
+        if(node.left!=null){
+            insert(node.left,value);
+        }
+        else{
+            System.out.println("Inserted " +value + " to the left of " + node.value);
+            node.left= new Node(value);
+        }
+    }else if(value>node.value){
+        if(node.right!=null){
+            insert(node.right,value);
+            }
+            else{
+                node.right= new Node(value);
+                System.out.println("Inserted " +value + " to the right of " + node.value);
+            }
+    }
+        }
+
+      public void traversePreOrder(Node node){
+            if(node!=null){
+                 System.out.println(" " +node.value);
+                traversePreOrder(node.left);
+                traversePreOrder(node.right);
+
+            }
+        }
+    
+
+
+ public void traversePostOrder(Node node){
+            if(node!=null){
+                traversePostOrder(node.left);
+                traversePostOrder(node.right);
+                 System.out.println(" " +node.value);
+            }
+        }
+    }
+}
+
+
+
+// lecture 11 (DSA) source code(vishal_karanjekar)
+//Breadth first search of a tree
+
+
+ public class MyTreeTest{
+    public static void main(String[] args){
+        Tree tree =new Tree();
+        Tree.Node root=new Tree.Node(5);
+
+        tree.insert(root,2);
+        tree.insert(root,4);
+         tree.insert(root,8);
+        tree.insert(root,6);
+        tree.insert(root,7);
+        tree.insert(root,3);
+        tree.insert(root,9);
+       System.out.println("preorder: ");
+          tree.traversePreOrder(root);
+
+          System.out.println("postorder: ");
+          tree.traversePostOrder(root);
+          
+          System.out.println("Breadth First Search/Level Order: ");
+          tree.bfs(root);
+    }
+
+
+    public static class Tree{
+       static class Node{
+           int value;
+           Node left ,right;
+
+           Node(int value){
+               this.value=value;
+               left=null;
+               right=null;
+             }
+        }
+
+ public void insert(Node node,int value){
+    if(value<node.value){
+        if(node.left!=null){
+            insert(node.left,value);
+        }
+        else{
+            System.out.println("Inserted " +value + " to the left of " + node.value);
+            node.left= new Node(value);
+        }
+    }else if(value>node.value){
+        if(node.right!=null){
+            insert(node.right,value);
+            }
+            else{
+                node.right= new Node(value);
+                System.out.println("Inserted " +value + " to the right of " + node.value);
+            }
+    }
+        }
+
+      public void traversePreOrder(Node node){
+            if(node!=null){
+                 System.out.println(" " +node.value);
+                traversePreOrder(node.left);
+                traversePreOrder(node.right);
+
+            }
+        }
+
+
+
+ public void traversePostOrder(Node node){
+            if(node!=null){
+                traversePostOrder(node.left);
+                traversePostOrder(node.right);
+                 System.out.println(" " +node.value);
+            }
+        }
+        
+        public int height(Node root){
+            if(root==null){
+                return 0;
+            }
+            else{
+                int lheight=height(root.left);
+                 int rheight=height(root.right);
+            
+            
+            if(lheight>rheight){
+                return (lheight+1);
+            }
+            else{
+            return (rheight+1);
+        }
+        }
+        } 
+        public void printCurrentLevel(Node root,int level){
+            if(root==null){
+                return;
+            }
+            if(level==1){
+                System.out.print(root.value + " ");
+            }
+            else if(level>1){
+               printCurrentLevel(root.left, level-1);
+              printCurrentLevel(root.right, level-1);
+               
+            }
+        }
+        
+        public void bfs(Node root){
+            int h= height(root);
+            
+            for(int i=1;i<=h;i++){
+            printCurrentLevel(root,i);
+            }
+        }
+    }
+}
+
+
+//lecture 12(DSA) source code(vishal_karanjekar)
+//single and multiple inheritance in java
+
+
+public class BmiMachine extends HeartMonitor{
+
+	public static void main(String[] args)
+	{
+		System.out.println(getMaxHeartRate(20));
+	}
+	public static int getMaxHeartRate(int age)
+	{
+		System.out.println("method executed from Sub Class");
+		return 230-age;
+	}
+	
+}
+}
+
+public class HeartMonitor {
+	
+	public String maxHeartRate;
+	public static void main(String[] args)
+   {
+		System.out.println(getMaxHeartRate(20));
+		
+	}
+	public static int getMaxHeartRate(int age)
+	{
+		System.out.println("Base Class");
+		int res=0;
+		res=230-age;
+		return res;
+	}
+}
+
+
+
+//My first project in java (vishal_karanjekar)
+//Caesar Cipher(DRDO Cryptography & Cryptanalysis Project)
+
+
+import java.util.Scanner;
+ 
+ public class CaesarCipher 
+ {
+ public static String Encrypt(String text, int positions) 
+ {
+ String toEncrypt = "", result = "";
+ //format the text to be encrypted
+ for (int i = 0; i < text.length(); i++) {
+ //remove space characters
+ if (text.charAt(i) == ' ')
+ continue;
+ else {
+ //if the character is lowercase, make it uppercase
+ if (Character.isLowerCase(text.charAt(i)))
+ toEncrypt += Character.toUpperCase(text.charAt(i));
+ //otherwise keep the uppercase character
+ else
+ toEncrypt += text.charAt(i);
+ }
+ }
+ 
+ for (int i = 0; i < toEncrypt.length(); i++) {
+ //shift the current letter of the message with given positions to right
+ 
+ char shiftedLetter = (char) (toEncrypt.charAt(i) + positions);
+
+ //if the ASCII code exceeds Z, then bring it back in the interval A..Z
+ if (shiftedLetter > 'Z')
+ shiftedLetter = (char) (shiftedLetter + 'A' - 'Z' - 1);
+ result += shiftedLetter;
+ }
+ return result;
+ }
+
+ public static String Decrypt(String text, int positions) {
+ //the encrypted code is already uppercase,
+ //therefore there is no need of formatting
+ String result = "";
+
+
+ for (int i = 0; i < text.length(); i++) {
+
+ //shift the current letter of the message with given positions to left
+ 
+ char shiftedLetter = (char) (text.charAt(i) - positions);
+
+ //if the ASCII code exceeds A, then bring it back in the interval A..Z
+ if (shiftedLetter < 'A')
+ shiftedLetter = (char) (shiftedLetter - 'A' + 'Z' + 1);
+ result += shiftedLetter;
+ }
+ return result;
+ }
+
+ public static void main(String[] args) {
+ System.out.println("WELCOME TO THE CAESAR CIPHER\n");
+
+ Scanner sc = new Scanner(System.in);
+
+ // Reading the input: plain message and the secret key
+ System.out.print("Type the message: ");
+ String message = sc.nextLine();
+ System.out.print("Type the key: ");
+ int key = sc.nextInt();
+ sc.close();
+
+ // Encrypting the plain message
+ System.out.println("\nEncrypting...");
+ String encryptedMessage = Encrypt(message, key);
+ System.out.println("The encrypted message is: " + encryptedMessage);
+
+ // Decrypting the encrypted message
+ System.out.println("\nDecrypting...");
+ String recoveredMessage = Decrypt(encryptedMessage, key);
+ System.out.println("The decrypted message is: " + recoveredMessage);
+ }
+ }
+ 
+ output:- 
+ WELCOME TO THE CAESAR CIPHER
+
+Type the message: vishal
+Type the key: 7
+Encrypting...The encrypted message is: CPZOHS
+
+Decrypting...
+The decrypted message is: VISHAL
+
+
