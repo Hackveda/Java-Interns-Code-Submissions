@@ -1,0 +1,38 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package string_operations;
+
+/**
+ *
+ * @author Parthkharva
+ */
+public class String_operations {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        char x= 'f';
+        String name1 = "aNuRaG";
+        String name2 = "parth";
+        
+        System.out.println(name1.length());
+        System.out.println(name2.charAt(2));// start counting position at 0
+        System.out.println(name1.compareTo(name2));//it will compare two strings and givesome asscci value.
+        System.out.println(name2.strip());// it will remove spaceing(before staring space and after ending space).
+        
+        char[] character = name1.toCharArray();// it will convert string value to character value
+        
+        for(int i=0;i<name1.length();i++){
+           System.out.println(character[i]);
+        }
+        
+        System.out.println(name1.toLowerCase());// it will convert upper to lower case
+        System.out.println(name2.toUpperCase());// it will convert lower to upper case
+        System.out.println(name2.substring(1,4));// it will give you the your requested part in this string value.
+        System.out.println(name2.substring(2));// it will start print in your requested place is consider as bigenning.
+        System.out.println(name2.isBlank());// it will give only true/false value according to has value or not.
+    } 
+}
