@@ -1,0 +1,48 @@
+// Creating a pattern
+package Nestedloop;
+import java.util.*;
+
+public class Pattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the height");
+		Scanner sc=new Scanner(System.in);
+		int i=sc.nextInt();
+		for(int k=1;k<=i;k++) {
+			for(int j=1;j<=k;j++)
+				System.out.print("*");
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+package Nestedloop;
+import java.util.*;
+
+public class twod {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int row=sc.nextInt();
+		int col=sc.nextInt();
+		int mat[][]=new int [row][col];
+		for(int i=0;i<row;i++)
+			for(int j=0;j<col;j++)
+				mat[i][j]=sc.nextInt();
+		
+		for(int []x: mat) {
+			for(int y:x)
+				System.out.print(y +"     ");
+			System.out.println();
+		}
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
