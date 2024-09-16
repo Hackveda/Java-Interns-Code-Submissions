@@ -1,0 +1,1070 @@
+// lecture 1 source  code (vishal_karanjekar)
+//hello world code
+
+class HelloWorld {
+    public static void main(String[] args) {
+         
+    System.out.println("Hello, World!");// for printing output
+        
+    }
+}
+
+
+
+//lecture 2 source code (vishal_karanjekar)
+//various datatypes in java
+
+public class DataType {
+	public static void main(String[] args) {
+		int i=1;
+		System.out.println(i);
+		short a=32767;
+		System.out.println("a= " + a);
+		String a_1="My name is Vishal \b";
+	    System.out.println(a_1);
+		String z="NULL \b";
+		System.out.println(z);
+		float pi=3.14_15F;
+		System.out.println("pi= " + pi);
+		
+
+	}
+
+}
+
+//lecture 3 source code (vishal_karanjekar)
+// nested while loop concept
+
+public class Solution{
+    
+public static void main(String[] args) {
+		int i=1,j=1;   //initialization
+		while(i<=10) {                    
+			while(j<=5) {
+				System.out.print("*");     //loop 1
+				j++;
+				
+			}
+			System.out.println("");       //loop 2
+			i++;
+			j=1;
+				
+		}
+		 // TODO Auto-generated method stub
+	}
+          
+
+}
+
+
+//lecture 4 source code(vishal_karanjekar)
+//oops concepts & strings 
+
+//abstraction 
+
+package Abstraction_code;
+
+abstract class AbstractClass {
+	public void Mymethod(){
+		System.out.println("Hi,I'm Vishal");
+          }
+	abstract public void anotherMethod();
+
+}
+
+//abtraction in inherited class
+package Abstract;
+
+public class Demo extends AbstractClass {
+    
+	public void anotherMethod() {
+		System.out.println("Hi, this is Ramesh");
+	}
+
+	public static void main(String[] args) {
+		
+		AbstractClass obj=new Demo();
+		obj.anotherMethod();    //abstract method
+		obj.Mymethod();        //normal method
+	
+     }
+}
+
+//strings functions
+
+public class StringFunctions {
+	
+	public static void main(String[] args) {
+		
+	char a='V';
+	String b="Ramesh";
+	String c="vishal";
+	System.out.println(b.length());
+	
+	System.out.println(c.charAt(0));
+	
+	System.out.println(c.compareTo(b));  //compare two strings based on their ASCII values
+	
+	System.out.println(b.strip());  //to remove the spaces at the start and at the end of a string
+	
+	System.out.println(c.toUpperCase());   //convert in to upper case
+	
+	System.out.println(c.toLowerCase());   //convert in to lower case
+	
+	System.out.println(c.substring(1,3)); //return substring from position 1 to position 3-1
+	System.out.println(c.substring(3));
+	
+	
+	System.out.println(c.isBlank());  //tell us whether the string is empty or not
+	
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+//lecture 5 source code(vishal_karanjekar)
+//creating class and objects
+
+class Demo{
+    String name;
+    int age;
+    int rollno;
+    
+    public void info()
+    {
+        System.out.println("Name = " + name);
+        System.out.println("Age = " + age);
+        System.out.println("Roll No = " + rollno);
+    }
+
+ 
+
+     public static void main (String[] args)
+ {
+     Demo student=new Demo();
+     student.name="Vishal";
+     student.age=21;
+     student.rollno=272;
+     student.info();
+ }
+ 
+ }
+
+
+//searching in an array
+
+class DemoArray
+{
+	public static void main (String[] args) 
+	{
+		int[] arrayInt = {32,87,3,589,1076,12,2000,8,622,127}; //declaration of an array
+	
+        int key = 2000;
+        int i;
+        boolean flag = false;
+        for(i=0;i<arrayInt.length;i++)
+        {
+            if(arrayInt[i]==key)
+            {
+                flag=true;
+                break;
+            }
+        }
+        if(flag)  //if flag==true
+        {
+          System.out.println("2000 is present in this array");
+        }
+        else{
+            System.out.println("Not present");
+        }
+	}
+}
+
+
+// 2D array creation 
+
+class Matrix
+{
+	public static void main (String[] args) 
+	{    
+
+		int [][]a=new int[15][15];  //defining size
+		for(int i=0;i<=11;i++){
+		    for(int j=0;i<10;j++)
+		    {
+		     System.out.println(a[i][j]);
+		    }
+		     System.out.println();
+		}
+	}
+}
+
+
+//printing elements in an array 
+
+class Array_Demo
+{
+	public static void main (String[] args)
+	{
+		int[] anArray;  //declaration
+
+		anArray=new int[13];  //Allocation 
+
+		//intialization 
+		anArray[0]=15;
+		anArray[1]=26;
+		anArray[2]=65;
+		anArray[3]=200;
+		anArray[4]=300;
+		anArray[5]=100;
+		anArray[6]=400;
+		anArray[7]=500;
+		anArray[8]=600;
+		anArray[9]=700;
+		anArray[10]=800;
+		anArray[11]=900;
+		anArray[12]=10;
+
+		for(int i=0;i<13;i++){
+		    System.out.println("Element at index "+i+": "+anArray[i]);
+		}
+	}
+}
+
+//problem on course
+
+import java.util.*;
+
+class CourseDemo
+{
+	public static void main (String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter no of course:");
+		int n = sc.nextInt();
+		if(n<=0){
+		    System.out.println("Invalid Range");
+		}
+		else{
+		    System.out.println("Enter course names:");
+		    String course[]=new String[n];
+		    int count =0,i;
+		    for(i=0;i<n;i++)
+		    {
+		     course[i]=sc.next();   
+		    }
+		    System.out.println("Enter the course to be searched:");
+		    String search=sc.nextLine();
+		    for(i=0;i<n;i++)
+		    {
+		        if(course[i]==search){
+		            count++;
+		            break;
+		        }
+		    }
+		    if(count!=0)
+		    {
+		        System.out.println(search+" course is available");
+		    }
+		    else
+		    {
+		        System.out.println(search+" course is not available");
+		    }
+		}
+	}
+}
+
+
+//lecture 6 source code (vishal_karanjekar)
+// array elements input code
+
+import java.util.Scanner;
+
+class Read_Input
+{
+  public static void main(String[] args)
+  {
+    int n;           // size of the array
+    Scanner sc= new Scanner(System.in);          //reading input
+    System.out.println("Enter the number of elements you want to store: ");
+    n=sc.nextInt();
+    
+    int[] array=new int[10];
+    System.out.println("Enter the elements of the array: ");
+    for(int i=0;i<n;i++)
+    {
+    array[i]=sc.nextInt();
+    System.out.println(array[i]);   //printing elements one by one
+    }
+  }
+}
+
+
+// 2D array using nested for loops
+
+import java.util.Scanner;
+
+class TwoDArray
+{
+  public static void main(String[] args)
+  {
+   System.out.println("Enter the size of 2D array: ");   
+    Scanner sc= new Scanner(System.in);
+    int rows=sc.nextInt();
+     int columns=sc.nextInt();
+    int twoD[][]= new int[rows][columns];
+    System.out.println("Enter the elements of the 2D array: ");
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;j<columns;j++)
+        {
+    twoD[i][j]=sc.nextInt();
+   
+    }
+  }
+   for(int []x:twoD)
+    {
+        for(int y:x)
+        {
+   System.out.print(y+" ");
+   
+    }
+    System.out.println();
+  }
+  
+  }
+}
+
+
+//nested for loop
+
+class Vishal
+{
+  public static void main(String[] args)
+  {
+   for(int i=0;i<4;i++)
+    {
+        for(int j=0;j<5;j++)
+        {
+    System.out.println("i value:: "+i + " j value:: " +j);
+        }
+    System.out.println(".........................");
+  }
+  
+  }
+}
+
+
+//nested while loop
+
+class Vishal
+{
+  public static void main(String[] args)
+  {
+      int i=0;
+      int j=0;
+   while(i<4)
+   {
+       while(j<5)
+   {
+    System.out.println("i value:: "+i + " j value:: " +j);
+     j++;
+       
+       i++;
+   }
+    
+  }
+  
+  }
+}
+
+
+//nested do while loop
+
+class Vishal
+{
+  public static void main(String[] args)
+  {
+     int i=1;
+   do
+   {
+    System.out.println("i value:: "+i );
+    i++;
+   }
+     while(i<10)  ;
+  
+  }
+}
+
+//if else condition
+
+class Vishal
+{
+  public static void main(String[] args)
+  {
+  int a=5;
+if(a<6)
+{
+    System.out.println("true");
+    
+}
+else 
+{
+  System.out.println("false");
+}
+}
+}
+
+
+//lecture 7 source code(vishal_karanjekar)
+//inheritance in java
+
+
+ public class C extends B{
+
+	public static void main(String[] args) {
+		A a= new A();
+		B b=new B();
+		System.out.println(a.x);
+		System.out.println(b.getb());
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+ class B extends A {
+
+	public int getb() {
+		set(2);
+		return x;
+		// TODO Auto-generated method stub
+
+
+	}
+
+}
+
+class A {
+     	
+	int x=1;
+	void set(int a) {
+		x=a;
+	
+     	}
+}
+
+//function overloading
+
+public class V extends V1 {
+    public static void main(String[] args) {
+       V obj= new V();   //creating an object
+       obj.disp('x',10);  
+       obj.disp(10,'x');
+       obj.disp(10);
+    }
+}
+
+class V1{
+    public void disp(char c,int num){
+        System.out.println(" 1st defination of method "); 
+    }
+    public void disp(int num,char c){
+        System.out.println(" 2nd defination of method ");
+    }
+    public void disp(int num){
+        System.out.println(" 3rd defination of method "); 
+    }
+}
+
+
+
+//function overriding
+
+class Parent {
+    void disp()
+    {
+        System.out.println("Parent's disp()");
+    }
+}
+  
+// Inherited class
+class Child extends Parent {
+  
+    void disp()           //method override
+    {
+        System.out.println("Child's disp()");
+    }
+}
+  
+class Main {
+    public static void main(String[] args)
+    {
+        Parent obj1 = new Parent();
+        obj1.disp();
+  
+        Parent obj2 = new Child();
+        obj2.disp();
+    }
+}
+
+
+//polymorphism 
+
+class V {
+ 
+    static int sum(int a, int b)     //method 1
+    {
+        return a + b;
+    }
+ 
+     static int sum(int a, int b, int c)    // Method 2
+    {
+        return a + b + c;
+    }
+}
+ 
+class Sum {
+
+    public static void main(String[] args)
+    {
+       // Calling method by passing values
+       
+        System.out.println(V.sum(2, 4));         //method 1
+        System.out.println(V.sum(6,2,9));          // Method 2
+}
+}
+
+
+
+//lecture 8 source code (vishal_karanjekar)
+//interface
+
+public interface NameOfInterface
+
+{
+  
+  //Any number of final ,static fields
+   
+ //Any number of abstract method declarations
+
+}
+
+
+// example of an interface 
+
+
+interface Bank
+{
+    float rateOfInterest();    //after compilation it will convert into abstract static
+}
+
+
+class PNB implements Bank
+
+{
+    
+public float rateOfInterest()
+    {
+   
+     return 9.7f;
+   
+ }
+
+}
+
+class SB implements Bank
+{
+    
+public float rateOfInterest()
+    {
+     
+   return 9.15f;
+    
+}
+
+}
+
+class Test 
+{
+   
+ public static void main(String[] args)
+    {
+ 
+       Bank b= new SB();
+      
+     Bank p=new PNB();
+       
+ System.out.println("ROI: " +b.rateOfInterest());
+        System.out.println("ROI: " +p.rateOfInterest());
+ 
+   }
+
+}
+
+
+//multiple inheritance using interface
+
+interface Printable{
+    void print();
+}
+interface Showable{
+   void show();
+}
+class Exercise implements Printable,Showable{
+   @Override
+    public void show() {
+        System.out.println("Showable ");
+        
+    }
+    @Override
+     public void print() {
+        System.out.println("Printable");
+        
+    }
+    
+}
+
+class Interfaces{
+    public static void main(String args[]) {
+        
+       Exercise obj =new Exercise();
+         obj.show();
+         obj.print();
+         
+    }
+}
+
+
+
+//lecture 9 source code(vishl_karanjekar)
+//encapsulation
+//access specifiers
+
+public class B extends A
+{
+     public static void main(String[] args)
+     {
+      B b=new B();
+      System.out.println(b.w);
+      //System.out.println(q.x);     //this one is showing error because 'x' is private so can't be accessed from this class
+      System.out.println(b.y);
+      System.out.println(b.z);
+       }
+}
+
+ class A
+{ 
+      int w = 10;
+      private int x =23;
+     public int y = 15;
+     protected int z = 50;
+   
+}
+
+
+
+//encapsulation
+
+private int vishal = 10;
+
+class A
+{
+ private int vishal=10;
+  int rishabh = 100;
+}
+
+
+
+public Class B extends A
+{
+    public static void main(String[] args)
+    {
+      B b = new B();
+      System.out.println(b.rishabh);
+      System.out.println(b.vishal);
+    }
+}
+
+
+
+//lecture 11 source code (vishal_karanjekar)
+//jshell
+
+
+jshell> 1
+$1 ==> 1
+
+jshell> 5
+$2 ==> 5
+
+
+jshell> 2+3
+$3 ==> 5
+
+
+jshell> 3*4
+$4 ==> 12
+
+jshell> 
+        String print(String s){
+   ...>     return s+s;
+   ...> }
+|   created method print(String)
+
+
+jshell> print("Vishal")
+$6 ==> "vishalvishal"
+        
+jshell> int x=5
+x ==> 5
+
+jshell> 
+        int sum(int x,int y){
+   ...>     return x+y;
+   ...> }
+|   created method sum(int,int)
+
+jshell> sum(12,13)
+$9 ==> 25
+
+
+
+//lecture 12 source code(vishal_karanjekar)
+//jlambda
+
+
+import java.util.ArrayList;
+
+ class A
+{
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        numbers.forEach( (i) -> {System.out.println(i); });
+      }
+  }
+
+
+
+//lecture 1 data structures (vishal_karanjekar)
+//Exception Handling
+
+public class ExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        //String age="33";//error (exception handling)
+        int age = 33;
+        int maxheartrate = 220 - age ;
+        System.out.println("Max heart rate is = " + maxheartrate);
+    }
+}
+
+
+//Exception Handling Example
+
+import java.util.Scanner;
+
+ class ExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        System.out.println("Welcome to Max Heart Rate Calculator");
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Please enter your age : ");
+        int age =sc.nextInt();
+        int maxheartrate = 220 - age ;
+        System.out.println("Max heart rate is = " + maxheartrate);
+    }
+}
+
+output:
+Welcome to Max Heart Rate Calculator
+Please enter your age : Twenty One
+Exception in thread "main" java.util.InputMismatchException
+at java.base/java.util.Scanner.throwFor(Scanner.java:939)
+at java.base/java.util.Scanner.next(Scanner.java:1594)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
+at ExceptionTest.main(ExceptionTest.java:14)
+
+
+//Exception Handling
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+ class ExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        //exception handling
+        try{
+        System.out.println("Welcome to Max Heart Rate Calculator");
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Please enter your age : ");
+        int age =sc.nextInt();
+        int maxheartrate = 220 - age ;
+        System.out.println("Max heart rate is = " + maxheartrate);
+    }catch(InputMismatchException e){
+        System.out.println("Please enter integer only");
+    }
+    }
+}
+
+output:  Welcome to Max Heart Rate Calculator
+Please enter your age : Twenty One
+Please enter integer only
+
+
+
+//lecture 2 DSA souce code(vishal_karanjekar)
+//Advanced Exception Handling
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+ class ExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        //exception handling
+        try{
+        System.out.println("Welcome to Max Heart Rate Calculator");
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Please enter your age : ");
+        int age =sc.nextInt();
+        int maxheartrate = 220 - age ;
+        System.out.println("Max heart rate is = " + maxheartrate);
+    }catch(Exception e){
+         System.out.println("Please enter integer only");
+          System.out.println(e.getLocalizedMessage());
+          System.out.println(e.getMessage());
+        
+        }
+    }
+}
+output:
+Welcome to Max Heart Rate Calculator
+Please enter your age : 
+twenty one
+Please enter integer only
+null
+null
+
+
+//lecture 2 DSA souce code(vishal_karanjekar)
+//Advanced Exception Handling
+//try catch and finally blocks
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+ class TryCatchFinallyTest{
+    
+    public static void main(String[] args)
+    {
+     try{
+         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter no 1: ");
+        int a =sc.nextInt();
+         System.out.println("Enter no 2: ");
+        int b =sc.nextInt();
+        int d=add(a,b);
+        System.out.println("Sum is equal to= "+d);
+    }catch(InputMismatchException e){
+        System.out.println("please enter integers only ");
+    }finally{
+        System.out.println("Integers not found");
+    }
+    }
+      private static int add(int a, int b){
+          int c=0;
+          try{
+              c=a+b;
+      }catch(Exception e) {
+          System.out.println("Please enter integers only");
+      }finally {
+        System.out.println("Fianlly executed ");
+        return c;
+      }
+        
+      }
+ }
+
+
+//throwing an exception 
+
+import java.util.Scanner;
+
+ public class ThrowExceptionTest{
+    
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please enter your age:  ");
+        int age =sc.nextInt();
+         if (age<=0){
+             throw new NumberFormatException();
+         }
+         else if(age>=120){
+              throw new NumberFormatException();
+         }
+         System.out.println("Max Heart Rate is" + (220 - age));
+      
+      }
+ }
+ 
+ 
+ //chained exception 
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ChainedException {
+
+	public static void main(String[] args)
+	{
+		try
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Please enter your height in cm ");
+			float height =sc.nextInt();  
+			
+			double idealWeight=50+(0.91*(height-152.4)); //Standard ideal weight
+
+			System.out.println("your ideal weight is : "+idealWeight);
+		}
+		catch(InputMismatchException e)
+		{
+			throw new NumberFormatException();
+		}
+		
+	}
+}
+
+
+
+//lecture 3 (DSA) source code(vishal_karanjekar)
+//Lists interface and arraylist in java
+
+import java.util.ArrayList;
+
+public class MyArrayListTest{
+    
+    public static void main(String[] args){
+      ArrayList  myArrayList= new ArrayList();
+      myArrayList.add(1);
+        myArrayList.add(2);
+          myArrayList.add(3);
+            myArrayList.add(4);
+              myArrayList.add(5);
+     System.out.println("printing list 1: ");
+      System.out.println(myArrayList.get(1));
+      System.out.println(myArrayList.get(0));
+      System.out.println(myArrayList.get(4));
+      
+      
+     System.out.println("updating elements");
+      myArrayList.add(1,6);
+      System.out.println(myArrayList.get(1));
+      
+       ArrayList List2= new ArrayList();
+      List2.addAll(myArrayList);
+      
+      System.out.println("printing list 2: ");
+      System.out.println(List2.get(1));
+      System.out.println(List2.get(0));
+      System.out.println(List2.get(4));
+      
+      List2.clear();
+      try{
+          System.out.println("printing list 2: ");
+      System.out.println(List2.get(1));
+      System.out.println(List2.get(0));
+      System.out.println(List2.get(4));
+      }catch(IndexOutOfBoundsException e){
+          System.out.println("list is cleared");
+      }
+      
+     ArrayList myArrayListClone = (ArrayList) myArrayList.clone();
+      System.out.println("printing from my arraylist clone");
+      System.out.println(myArrayListClone.get(1));
+      System.out.println(myArrayListClone.get(0));
+      System.out.println(myArrayListClone.get(4));
+      
+      System.out.println("check if my arraylist clone contains 6");
+      boolean result=myArrayListClone.contains(6);
+      if(result){
+          System.out.println("item exists");
+      }
+      else{
+           System.out.println("item does not exist");
+          }
+    }
+}
+
+
+
+//lecture 4 (DSA) source code (vishal_karanjekar)
+//stacks in java
+
+import java.util.Stack;
+
+public class MyStack{
+    public static void main(String[] args){
+        Stack intStack = new Stack<Integer>();
+        System.out.println("Is stack empty: " + intStack.empty());
+        intStack.push(10);
+          intStack.push(20);
+            intStack.push(30);
+        System.out.println(" Get the top element: " + intStack.peek());
+        System.out.println("Is stack contains 20: "+ intStack.search(20));
+        intStack.pop();
+        System.out.println("Top element after pop: "+ intStack.peek());
+    }
+}
+
+
+
+//ArrayDeque
+
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+public class StackUsingDeque{
+     public static void main(String[] args)
+       {
+             ArrayDeque myDeque = new ArrayDeque<String>();
+
+             myDeque.add(" Vishal ");
+             myDeque.addFirst(" Rishabh ");
+             myDeque.addLast(" New Person ");
+
+             myDeque.offerFirst(" Ram ");  //at the first
+             myDeque.offer(" Lakhan ");    //at the last
+
+             System.out.println(" First Element: " + myDeque.getFirst());
+             System.out.println(" Last Element: " + myDeque.getLast());
+             System.out.println(" Deque contains Rishabh: " + myDeque.contains(" Rishabh "));
+
+             System.out.println("Iterating all the elements in descending order");
+
+             Iterator<String> myIterator = myDeque.descendingIterator();
+
+              while(myIterator.hasNext()) {
+                    System.out.println(myIterator.next());
+              }
+         }
+}
