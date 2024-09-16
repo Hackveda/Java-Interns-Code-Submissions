@@ -1,0 +1,17 @@
+#File: Ex1.java
+
+class Example1
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello Vivek");
+	}
+}
+
+#To compile it via cmd:
+
+javac Ex1.java
+
+#To run it in cmd:
+
+java Example1
