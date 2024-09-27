@@ -1,0 +1,292 @@
+// Video lecture 1 and 2 source code
+
+
+import java util.*;
+class VivekGautam
+{
+  public static void main(String [] args)
+    {
+      
+      Scanner sc = new Scanner(system.in);         //we use this syntax for taking a new input
+      
+      
+     System.out.print("My name is Vivek");          //for printing some thing
+    }
+}
+
+
+
+//Variables and data type
+public class A  
+{  
+    static int m=100;//static variable  
+    void method()  
+    {    
+        int n=90;//local variable    
+    }  
+    public static void main(String args[])  
+    {  
+        int data=50;//instance variable    
+    }  
+}
+
+
+//video lecture-3 
+
+public class Solution {
+
+	public static void main(String[] args) {
+		int i=1,j=1;
+		while(i<=10) {
+			while(j<=5) {
+				System.out.print("*");
+				j++;
+				
+			}
+			System.out.println("");
+			i++;
+			j=1;
+				
+		}
+
+	}
+
+}
+
+
+//video lecture-4 
+
+// Abstract class
+package Abstract;
+
+abstract class AbstractClass {
+	public void Mymothod(){
+		System.out.println("Hello");
+		
+	}
+	abstract public void anotherMar();
+
+}
+
+
+package Abstract;
+public class Demo extends AbstractClass {
+	public void   anotherMar() {
+		System.out.println("another");
+	}
+
+	public static void main(String[] args) {
+		
+		AbstractClass obj=new Demo();
+		obj.anotherMar();
+		obj.Mymothod();
+
+	}
+
+}
+
+//STRING AND CHARACTER
+
+public class Stringoperator {
+	
+	public static void main(String[] args) {
+		
+	char a='A';
+	String b="Vivek Gautam";      // String is nothing but its a group of character
+	String c="java devloper";
+	System.out.println(b.length());
+	
+	System.out.println(c.charAt(0));
+	System.out.println(c.compareTo(b));
+	System.out.println(b.strip());
+	
+	
+	System.out.println(c.toUpperCase());//convert in to upper case
+	System.out.println(c.toLowerCase());//convert in to lower case
+	System.out.println(c.substring(1,3));//return substring from position 1to position 3-1
+	System.out.println(c.substring(3));
+	}
+
+}
+
+
+//VIDEO LECTURE 5 ARRAY IN JAVA
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Demo
+{   
+    //data member
+    String name;
+    int rollno;
+    int age;
+    
+    public void info()  //member function 
+    {
+        System.out.println("Name: "+name);
+        System.out.println("Roll Number: "+rollno);
+        System.out.println("Age: "+age);
+    }
+}
+class Gautam
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Demo student = new Demo();  
+		//class_name object_name = new class_name()
+		//Accesing and property value
+		
+		student.name = "Vivek";
+		student.rollno=362;
+		student.age=21;
+		
+		//calling method 
+		student.info();
+		
+	}
+}
+
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Vivek
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int[] arrayOfInts = {32,87,3,589,1076,12,2000,8,622,127};
+	//   datatype array_name == elemnts in array
+		
+        int serchfor = 12;
+        int i;
+        boolean foundIt = false;
+        for(i=0;i<arrayOfInts.length;i++)
+        {
+            if(arrayOfInts[i]==serchfor)
+            {
+                foundIt=true;
+                break;
+            }
+        }
+        if(foundIt)  //if foundIt==true
+        {
+          System.out.println("12 is present in this array");
+        }
+        else{
+            System.out.println("Not found");
+        }
+	}
+}
+
+//2D ARRAY
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Vivek
+{
+	public static void main (String[] args)
+	{    
+	    // 2D array creation 
+		int [][]a=new int[15][15];  //10 rows and 10 column
+		for(int i=0;i<=11;i++){
+		    for(int j=0;i<10;j++)
+		    {
+		     System.out.println(a[i][j]);
+		    }
+		     System.out.println();
+		}
+	}
+}
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Array_Demo
+{
+	public static void main (String[] args)
+	{
+		int[] anArray;  //declare an array of integers
+		
+		anArray=new int[13];  //Allocation of memory 
+		
+		//intialization from first element 
+		anArray[0]=15;
+		anArray[1]=26;
+		anArray[2]=65;
+		anArray[3]=200;
+		anArray[4]=300;
+		anArray[5]=100;
+		anArray[6]=400;
+		anArray[7]=500;
+		anArray[8]=600;
+		anArray[9]=700;
+		anArray[10]=800;
+		anArray[11]=900;
+		anArray[12]=10;
+		
+		for(int i=0;i<=13;i++){
+		    System.out.println("Element at index "+i+": "+anArray[i]);
+		}
+	}
+}
+
+//QUESTION TO IDENTIFY COURSE
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+class Vivek
+{
+	public static void main (String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter no of course:");
+		int n = sc.nextInt();
+		if(n<=0){
+		    System.out.println("Invalid Range");
+		}
+		else{
+		    System.out.println("Enter course names:");
+		    String course[]=new String[n];
+		    int count =0,i;
+		    for(i=0;i<n;i++)
+		    {
+		     course[i]=sc.next();   
+		    }
+		    System.out.println("Enter the course to be searched:");
+		    String search=sc.next();
+		    for(i=0;i<n;i++)
+		    {
+		        if(course[i]==search){
+		            count++;
+		            break;
+		        }
+		    }
+		    if(count!=0)
+		    {
+		        System.out.println(search+" course is available");
+		    }
+		    else
+		    {
+		        System.out.println(search+" course is not available");
+		    }
+		}
+	}
+}
