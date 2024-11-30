@@ -1,0 +1,109 @@
+//Inheritance
+package Inheritance;
+
+public class A {
+	int x=1;
+	public void set(int a) {
+		x=a;
+	}
+
+}
+package Inheritance;
+
+public class B extends A {
+
+	public int getb() {
+		set(2);
+		return x;
+		// TODO Auto-generated method stub
+		
+
+	}
+
+}
+package Inheritance;
+
+public class C extends B{
+
+	public static void main(String[] args) {
+		A a= new A();
+		B b=new B();
+		System.out.println(a.x);
+		System.out.println(b.getb());
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+Overloading
+package OverLoadaing;
+
+public class D1 {
+	public void disp(int a,char c) {
+		System.out.println("I am the first");
+	}
+ public void disp(char c,int a) {
+	 System.out.println("I am the second");
+ }
+}
+package OverLoadaing;
+
+public class D2 extends D1{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		D1 obj=new D1();
+		obj.disp(51, 'x');
+		obj.disp('x', 51);
+
+	}
+
+}
+
+
+polymorphism
+package polymorpishm;
+
+public class Animal {
+	public void animalSound() {
+	    System.out.println("The animal makes a sound");
+	  }
+
+}
+
+package polymorpishm;
+
+public class cat extends Animal {
+		  public void animalSound() {
+		    System.out.println("The pig says: mao mao");
+		  }
+		}
+
+
+package polymorpishm;
+
+public class dog extends Animal {
+	  public void animalSound() {
+		    System.out.println("The dog says: bow wow");
+		  }
+		} 
+
+
+package polymorpishm;
+
+public class sol {
+
+	public static void main(String[] args) {
+		Animal myAnimal = new Animal();  // Create a Animal object
+	    Animal mycat = new cat();  // Create a Pig object
+	    Animal mydog = new dog();  // Create a Dog object
+	    myAnimal.animalSound();
+	    mycat.animalSound();
+	    mydog.animalSound();
+	  }
+		// TODO Auto-generated method stub
+
+	}
+
+
